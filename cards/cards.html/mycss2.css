@@ -1,0 +1,59 @@
+.recipes {
+  width: 75%;
+  background-color:lightgray;
+  padding: 100px;
+  text-align: center;
+  border-radius: 5px;
+  margin: 0 auto;
+  height: 500px;
+
+}
+.title{
+  height: 0px;
+  width: 200px;
+  margin: auto;
+  position:relative;
+  
+}
+.div1{
+  float: left;
+  margin-right: 10px;
+  height: 290px;
+  width: 45%;
+  border-radius: 10px;
+  background-color:white;
+  text-align: left;
+  box-shadow: 3px 3px 4px #000;
+  -moz-box-shadow: 3px 3px 4px #000;
+  -webkit-box-shadow: 3px 3px 4px #000
+  
+
+}
+.div2{
+  float: right;
+  margin-right: 10px;
+  height: 290px; 
+  width: 45%;
+  border-radius: 10px;
+  text-align: left;
+  background-color:white;
+  box-shadow: 3px 3px 4px #000;
+  -moz-box-shadow: 3px 3px 4px #000;
+  -webkit-box-shadow: 3px 3px 4px #000
+
+}
+input.button1 {
+    width: 100px;;
+    height:50px;
+    color: blue;
+    border-color: blue;
+    background-color:white;
+    border-radius: 20%;
+    cursor: pointer;
+  }
+  input.button1:hover {
+    cursor: pointer;
+    background-color: #207126;
+    border-color: #207126;
+    color: white
+  }
