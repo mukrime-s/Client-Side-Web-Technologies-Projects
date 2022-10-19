@@ -2,14 +2,19 @@
     width: 400px;
     border-radius: 5px;
     background-color:rgb(194, 185, 185);
-    padding: 100px;
     margin: 0 auto ;
+    padding: 10px;
+    padding-top: 0;
     display: table;
     text-align: center;
-    box-shadow: 3px 3px 4px #000;
-   -moz-box-shadow: 3px 3px 4px #000;
-   -webkit-box-shadow: 3px 3px 4px #000;
-
+    box-shadow: 3px 3px 4px gray;
+   -webkit-box-shadow: 3px 3px 4px gray;
+}
+body{
+  margin-top: 20px;
+}
+h1 {
+  margin-bottom: 0px;
 }
 
   input[type=text], select, textarea {
@@ -25,8 +30,8 @@
     background-color: whitesmoke;
   }
   input.button1 {
-    width: 50px;;
-    height:50px;
+    width: 40px;;
+    height:40px;
     color: red;
     border-color: red;
     border-radius: 50%;
@@ -34,8 +39,8 @@
     border-style: solid;
   }
   input.button2{
-    width: 50px;
-    height:50px;
+    width: 40px;
+    height:40px;
     color: blue;
     border-color: blue;
     border-radius: 50%;
@@ -43,8 +48,8 @@
     border-style: solid;
   }
   input.button3 {
-    width: 50px;
-    height:50px;
+    width: 40px;
+    height:40px;
     color: blue;
     border-color: blue;
     border-radius: 50%;
