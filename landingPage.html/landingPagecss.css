@@ -1,0 +1,30 @@
+body {
+        /* Default large settins */
+  }
+@media (max-width: 768px){/* for small settins */
+}
+@media (min-width: 768px){/* for medium settins */
+
+}
+@media (min-width: 992px){/* for large settins */
+}
+.container1{
+    display: block;
+    height: 630px;
+    background: linear-gradient(rgb(40,42,53,0.90),rgb(40,42,53,0.90)),url('bg-img.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    align-items: center;
+    text-align: center;
+    color: rgb(248, 239, 239);
+    word-wrap:break-word;
+    padding-top: 20%;
+}
+.btngetStarted{
+    border-radius: 20px;
+    width: 15%;
+    height:40px;
+    color: rgb(248, 239, 239);
+    background-color: rgb(79, 155, 79);
+}
