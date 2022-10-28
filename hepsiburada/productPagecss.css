@@ -3,17 +3,31 @@
     margin: auto;
     display: flex;
     flex-wrap: wrap;
+    align-items: flex-start;
 }
 
 .productImg{
     width: 50%;
 }
+.Img{
+    width: 100%;
+    align-items: center;
+}
+.tableInfo{
+    align-items: center;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+.hr{
+    width: 85%;
+}
 .productInfo{
     background-color: rgb(230, 229, 229);
     width: 50%;
-    flex-direction: column;
     margin:0;
-    padding: auto;
+    
 }
 .title{
     margin-bottom: 0%;
