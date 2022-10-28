@@ -1,0 +1,80 @@
+.container{
+    align-items: center;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.productImg{
+    width: 50%;
+}
+.productInfo{
+    background-color: rgb(230, 229, 229);
+    width: 50%;
+    flex-direction: column;
+    margin:0;
+    padding: auto;
+}
+.title{
+    margin-bottom: 0%;
+    font-size: large;
+}
+.blue{
+    color: rgb(50, 50, 199);
+    font-size: large;
+    margin-top: 0%;
+}
+.price{
+    font-size: x-large;
+    font-weight: bolder;
+}
+.TL{
+    font-size: large;
+    font-weight: bolder;
+}
+.bold{
+    font-weight: bolder;
+    color: black;
+}
+.seller{
+    padding: 1%;
+    color: rgb(158, 153, 153);
+    background-color: white;
+}
+.smallblue{
+    color: rgb(50, 50, 199);
+}
+.green{
+    color: rgb(52, 146, 37);
+}
+.btn1{
+    background-color: rgb(176, 172, 172);
+    font-size: large;
+    font-weight: bold;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border-color:rgb(176, 172, 172) ;
+}
+.change{
+    border-radius: 20px;
+    background-color: rgb(227, 168, 232);
+}
+.hepsijet{
+    position: absolute;
+    left: 90%;
+}
+.deliveryOption{
+    background-color: white;
+}
+.orange{
+    color: rgb(244, 112, 11);
+}
+.sepeteEkle{
+    background-color:rgb(244, 112, 11);
+    border-color: rgb(244, 112, 11);
+    border-radius: 20px;
+    color: white;
+    position: absolute;
+    left: 90%;
+}
