@@ -13,6 +13,20 @@
     width: 100%;
     align-items: center;
 }
+.fa-solid fa-star{
+    font-size: 10px;
+    width: 22%;
+    position: absolute;
+    color: black;
+    margin-top: 4px;
+    margin-bottom: 4px;
+    border-radius: 20px;
+    background-color: #eee;
+    padding: 5px;
+}
+.orange{
+    color: orange;
+}
 .tableInfo{
     align-items: center;
     width: 100%;
@@ -38,13 +52,23 @@
     font-size: large;
     margin-top: 0%;
 }
+.starandprice{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
 .price{
+
     font-size: x-large;
     font-weight: bolder;
 }
 .TL{
     font-size: large;
     font-weight: bolder;
+}
+.evaluation{
+    font-size: x-large;
+    font-weight: lighter;
 }
 .bold{
     font-weight: bolder;
@@ -70,6 +94,9 @@
     align-items: center;
     border-color:rgb(176, 172, 172) ;
 }
+.btn1:hover{
+    cursor: pointer;
+}
 .change{
     border-radius: 20px;
     background-color: rgb(227, 168, 232);
@@ -80,15 +107,62 @@
 }
 .deliveryOption{
     background-color: white;
+    border-radius: 20px;
+}
+.btn3{
+    background-color:rgb(244, 112, 11);
+    color: white;
+    width: 20%;
+    height: 40% ;
+    border-radius: 20px;
+    border-color:rgb(244, 112, 11); ;
+}
+.btn1:hover{
+    cursor: pointer;
+}
+.btn3:hover{
+    cursor: pointer;
 }
 .orange{
     color: rgb(244, 112, 11);
+    font-size: large;
 }
-.sepeteEkle{
+.white{
+    color: white;
+}
+.btnsepeteEkle{
     background-color:rgb(244, 112, 11);
     border-color: rgb(244, 112, 11);
     border-radius: 20px;
     color: white;
     position: absolute;
     left: 90%;
+}
+.btnsepeteEkle:hover{
+    cursor: pointer;
+}
+.icons{
+    display: flex;
+    padding-left:2% ;
+}
+.btnKonum{
+    color: rgb(244, 112, 11);
+    position: absolute;
+    left: 90%;
+    top: 30%;
+    background-color: rgb(235, 192, 123);
+    border-radius: 20px;
+    border-color: rgb(235, 192, 123);
+}
+.btnKonum:hover{
+    cursor: pointer;
+}
+.bntOtherSeller{
+    background-color: white;
+    width: 100%;
+    border-radius: 20px;
+    border-color: gray;
+}
+.bntOtherSeller:hover{
+    cursor: pointer;
 }
