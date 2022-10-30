@@ -41,6 +41,10 @@
     .col-xs-12 {
         width: 100%;
     }
+    .workThisnone{
+        display: none;
+        visibility: hidden;
+    }
 }
 @media only screen and (min-width: 768px){/* for medium settins */
     .col-s-1 {
@@ -78,6 +82,10 @@
     }
     .col-s-12 {
         width: 100%;
+    }
+    .workThisnone{
+        display: none;
+        visibility: hidden;
     }
 }
 @media only screen and (min-width: 992px){/* for large settins */
@@ -117,6 +125,11 @@
     .col-12 {
         width: 100%;
     }
+    .workThisnone{
+        display: flex;
+        visibility: visible;
+    }
+
 }
 .container1{
     display: flex;
@@ -134,7 +147,7 @@
 }
 .btngetStarted{
     border-radius: 20px;
-    width: 15%;
+    width: 250px;
     height:40px;
     color: rgb(248, 239, 239);
     background-color:rgb(24, 125, 83);
@@ -159,10 +172,11 @@
     color: #ffffff;
     height: auto;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     text-align: center;
+
 }
-.light{
+.lightfont{
     font-weight: normal;
     font-size: small;
 }
@@ -176,6 +190,16 @@
     padding: 2px;
     background-color: #ffffff;
     
+}
+.NavbarStyle{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+.Icon{
+    color: rgb(3, 79, 3);
+    background-color: rgb(197, 241, 197);
+    border-radius: 20px;
 }
 .footer{
     color: rgb(160, 157, 157);
