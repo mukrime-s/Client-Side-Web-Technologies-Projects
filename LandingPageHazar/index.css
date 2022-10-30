@@ -1,0 +1,109 @@
+/*HEADER_SECTION*/
+.header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+
+    height: 630px;
+
+    background: linear-gradient(rgb(40, 42, 53, 0.90),rgb(40, 42, 53,0.90)), url('bg-img.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50%; 
+}
+.header > h1 {
+    font-size: 3rem;
+    font-weight: bold;
+}
+.header > button {
+    margin-top: 5px;
+    padding-left: 50px; padding-right: 50px;
+    padding-top: 10px; padding-bottom: 10px;
+
+    border-radius: 50px;
+    color: white;
+    background-color: rgb(10, 148, 93);
+}
+
+/*FIRST_MAIN_SECTION*/
+div.color_style > h4 {
+    font-weight: bold;
+    color: rgb(10, 148, 93);
+}
+
+/*THIRD_SECTION*/
+.second_main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    background-color: rgba(20, 24, 46, 0.9);
+}
+.second_main > h3 {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    color: white;
+}
+.seven-cols {
+    justify-content: center;
+}
+.seven-cols .col-lg-1 {
+    width: 14.285714285714285714285714285714%;
+    *width: 14.285714285714285714285714285714%;
+}
+.seven-cols .col-lg-2 {
+    width: 28.5714%;
+}
+.div_sm {
+    padding: 5px;
+}
+.p_sm {
+    display: inline-block;
+    color: white;
+}
+.cnn_img {
+    padding-right: 20px;
+}
+
+/*LAST_SECTION*/
+.card-container {
+    background-color: rgb(202, 201, 201);
+}
+.card-body > p {
+    font-weight: bold;
+}
+h1 > span {
+    font-size: 16px;
+}
+
+/*RESPONSIVE_DESIGN*/
+@media screen and (max-width: 768px) {
+    .header > h1 {
+        font-size: 2.3rem;
+        font-weight: bold;
+    }
+    .header > h3 {
+        font-size: 1.4rem;
+    }
+    .header > p {
+        font-size: 0.8rem;
+    }
+    .header > button {
+        font-size: 0.8rem;
+        margin-top: 5px;
+        padding-left: 150px; padding-right: 150px;
+        padding-top: 10px; padding-bottom: 10px;
+    
+        border-radius: 50px;
+        color: white;
+        background-color: rgb(10, 148, 93);
+    }
+}
+@media screen and (max-width: 992px) {
+    .cnn_img {
+        display: none;
+        visibility: hidden;
+    }
+}
