@@ -107,3 +107,27 @@ h1 > span {
         visibility: hidden;
     }
 }
+.Icon{
+    color: rgb(3, 79, 3);
+    background-color: rgb(206, 239, 206);
+    border-radius: 20px;
+}
+.NavbarStyle{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+.lightfont{
+    font-weight: bold;
+    font-size: small;
+}
+.card-container{
+    display: flex;
+    flex-wrap: wrap;
+    border: left;
+}
+/*FOOTER_DESIGN*/
+.footer{
+    color: rgb(160, 157, 157);
+    text-align: center;
+}
