@@ -3,6 +3,7 @@
 <head>
     
     <link rel="stylesheet" type="text/css" href="productPagecss.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/
 6.2.0/css/all.min.css" integrity="sha512-
 xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
@@ -11,9 +12,10 @@ crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
     <div class="container">
-        <div class="productImg">
+        <div class="productImg col-lg-6 col-md-12 col-12">
             <img class="Img" src="kulaklik.jfif" />
             <div class="tableInfo">
+                <hr class="hrbig">
                 <div class="leftinfo">
                     <hr class="hr ">
                     <table>
@@ -54,7 +56,7 @@ crossorigin="anonymous" referrerpolicy="no-referrer" />
             </div>
             
         </div>
-        <div class="productInfo">
+        <div class="productInfo col-lg-6 col-md-12 col-12">
             <h2 class="title">TWS i12 Bluetooth 5.0 Kulaklık - Şarj Üniteli</h2>
             <h2 class="blue">TWS</h2>
             <div class="starandprice">
@@ -72,16 +74,20 @@ crossorigin="anonymous" referrerpolicy="no-referrer" />
             <div class="taksit">19 TL x 6 aya varan <span class="bold">Taksitle</span></div>
             <p class="green">Seçili Telefon Alana TWS i12 Bluetooth 5.0 Kulaklık %10 İndirimli! </p>
             <hr>
-            <div class="seller"><span>Satıcı:<span class="smallblue">SFIT TEKNOLOJI</span> | Puan |<span class="bold"> Kampanyaları Gör </span></span></div>
+            <div class="seller"><span>Satıcı:<span class="smallblue">SFIT TEKNOLOJI</span> |Puan <button class="btnpuan"> 9.4 </button><button class="btnSoru">?</button> |<span class="bold"> Kampanyaları Gör<button class="btnKampanya">3</button> </span></span></div>
+            <hr>
             <div class = "div_btn">
                 <button class = "btn1"> - </button> 
                 <button class = "btn2"> 1 Adet </button> 
-                <button class = "btn1"> + </button>
+                <button class = "btn3"> + </button>
     
-                <button class = "btn3"><i class="fa-solid fa-cart-shopping white"></i> Sepete Ekle </button>
+                <button class = "btnSepet"><i class="fa-solid fa-cart-shopping white"></i> Sepete Ekle </button>
             </div>
-            <div class="change">
-                <div>Eski ürününü yenisi ile değiştirmek ister misin?</div>
+            <div class="divchange">
+                <div>Eski ürününü yenisi ile değiştirmek ister misin?
+                <button class="btnSoru">?</button> 
+                <button class="btnFaydalan">Faydalan</button>   
+                </div>
             </div>
             <div class="icons"><span><i class="fa-regular fa-heart"></i>Beğen  &nbsp;&nbsp;</span>
                 <span><i class="fa-regular fa-bookmark"></i>Listeme ekle &nbsp;&nbsp;</span>
@@ -90,14 +96,19 @@ crossorigin="anonymous" referrerpolicy="no-referrer" />
     
             <hr>
             <div class="deliveryOption">
-                <span><b>Teslimat Seçenekleri</b></span><button class="btnKonum"><i class="fa-thin fa-location-dot orange"></i>Konum seç</button>
-                <h4>Standart teslimat</h4>
-                <div>En geç <span class="bold">14 Ekim Cuma</span> günü kargoda<img class="hepsijet" src="hepsijet.jpg" /></div>
+                <span><b>Teslimat Seçenekleri</b></span>
+                <button class="btnKonum"><i class="fa-thin fa-location-dot orange"></i>Konum seç</button>
+                <h4><p>Standart teslimat</p></h4>
+                <div class="divkargo">En geç <span class="bold">14 Ekim Cuma</span> günü kargoda<img  src="hepsijet.jpg" /></div>
             </div>
-            <div><b>Diğer Satıcılar - <span class="orange">Tümü(2)</span></b> </div>
-            <button class="bntOtherSeller">
-                <p>Torima</p>
-                <div><b>21 saat 42 dakika</b> içinde sipariş verirsen yarın kargoda <span class="TL">148,97 TL</span><button class="btnsepeteEkle">Sepete Ekle</button></div>
+            <div><b>Diğer Satıcılar - <span class="orange">Tümü(2)</span></b><button class="btnSoru">?</button>  </div>
+            <div class="divOtherSeller">
+                <div class="flexContainer"><div class="divSaticiPuanı"> 9.7 </div><span class="saticiIsmi">Torima</span></div>
+                
+                <div class="flexContainer2"><b>21 saat 42 dakika</b> içinde sipariş verirsen yarın kargoda <span class="TL">148,97 TL <button class="btnsepeteEkle">Sepete Ekle</button></span></div>
+                
+                
+                
             </button>
     
     
