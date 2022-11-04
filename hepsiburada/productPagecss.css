@@ -43,6 +43,7 @@
     margin:0;
     
 }
+
 .title{
     margin-bottom: 0%;
     font-size: large;
@@ -65,6 +66,7 @@
 .TL{
     font-size: large;
     font-weight: bolder;
+    display: flex;
 }
 .evaluation{
     font-size: x-large;
@@ -75,15 +77,33 @@
     color: black;
 }
 .seller{
+    border-radius: 5px;
     padding: 1%;
     color: rgb(158, 153, 153);
     background-color: white;
 }
+.div_btn{
+    display: inline-flex;
+    align-items: center;
+}
 .smallblue{
     color: rgb(50, 50, 199);
 }
+.btnpuan{
+    background-color: rgb(52, 146, 37);
+    color: white;
+    border-radius: 10px;
+
+}
 .green{
     color: rgb(52, 146, 37);
+}
+.btnKampanya{
+    border-radius: 50%;
+    background-color: rgb(244, 112, 11);
+    color: white;
+    border-color:rgb(244, 112, 11);
+
 }
 .btn1{
     background-color: rgb(176, 172, 172);
@@ -93,38 +113,63 @@
     justify-content: center;
     align-items: center;
     border-color:rgb(176, 172, 172) ;
+    width: 50px;
+    height: 50px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius:10px ;
 }
-.btn1:hover{
-    cursor: pointer;
-}
-.change{
-    border-radius: 20px;
-    background-color: rgb(227, 168, 232);
-}
-.hepsijet{
-    position: absolute;
-    left: 90%;
-}
-.deliveryOption{
-    background-color: white;
-    border-radius: 20px;
+.btn2{
+    border-color:rgb(176, 172, 172) ;
+    width: 50px;
+    height: 50px;
 }
 .btn3{
-    background-color:rgb(244, 112, 11);
-    color: white;
-    width: 20%;
-    height: 40% ;
-    border-radius: 20px;
-    border-color:rgb(244, 112, 11); ;
+    background-color: rgb(176, 172, 172);
+    font-size: large;
+    font-weight: bold;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border-color:rgb(176, 172, 172) ;
+    width: 50px;
+    height: 50px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius:10px ;
 }
 .btn1:hover{
     cursor: pointer;
 }
-.btn3:hover{
+
+
+.divkargo{
+    display: flex;
+    justify-content: space-around;
+    
+}
+
+.btnSepet{
+    background-color:rgb(244, 112, 11);
+    color: white;
+    width:150px;
+    height: 50px ;
+    border-radius: 20px;
+    border-color:rgb(244, 112, 11); 
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+.btn1:hover{
+    cursor: pointer;
+}
+.btnSepet:hover{
     cursor: pointer;
 }
 .orange{
     color: rgb(244, 112, 11);
+    font-size: large;
+}
+.gray{
+    color: rgb(144, 139, 139);
     font-size: large;
 }
 .white{
@@ -135,21 +180,38 @@
     border-color: rgb(244, 112, 11);
     border-radius: 20px;
     color: white;
-    position: absolute;
-    left: 90%;
+    display: flex;
 }
 .btnsepeteEkle:hover{
     cursor: pointer;
+}
+.divchange{
+    border-color: rgb(105, 83, 140);
+    border-radius: 20px;
+    background-color: rgb(227, 168, 232);
+    text-align: center;
+    height: 40px;
+}
+.btnSoru{
+    font-weight: bold;
+    border-radius: 50%;
+    width: 50 px;
+    background-color: rgb(202, 199, 199);
+}
+.btnFaydalan{
+    border-radius: 10px;
 }
 .icons{
     display: flex;
     padding-left:2% ;
 }
+.deliveryOption{
+    background-color: white;
+    border-radius: 20px;
+}
+
 .btnKonum{
     color: rgb(244, 112, 11);
-    position: absolute;
-    left: 90%;
-    top: 30%;
     background-color: rgb(235, 192, 123);
     border-radius: 20px;
     border-color: rgb(235, 192, 123);
@@ -157,12 +219,64 @@
 .btnKonum:hover{
     cursor: pointer;
 }
-.bntOtherSeller{
+
+.divSaticiPuanı{
+    color: white;
+    display: flex;
+    width: 50px;
+    height: 30px;
+    border-radius: 10px;
+    background-color: rgb(3, 167, 3);
+    justify-content: center;
+}
+.saticiIsmi{
+    color: blue;
+    background-color: white;
+    display: flex;
+}
+.flexContainer{
+    display: flex;
+}
+.flexContainer2{
+    display: flex;
+}
+.divOtherSeller{
     background-color: white;
     width: 100%;
     border-radius: 20px;
     border-color: gray;
 }
-.bntOtherSeller:hover{
-    cursor: pointer;
+.hrbig{
+    width: 90%;
+}
+/*RESPONSIVE_DESIGN*/
+@media screen and (max-width: 992px) {
+    .hr{
+        display: none;
+        visibility: hidden;
+    }
+    .green{
+        display: none;
+        visibility: hidden;
+    }
+    .taksit{
+        align-items: center;
+        text-align: center;
+    }
+    .title{
+        display: none;
+        visibility: hidden;
+
+    }
+    .blue{
+        display: none;
+        visibility: hidden;
+    }
+}
+@media screen and (min-width: 992px) {
+    .hrbig{
+        display: none;
+        visibility: hidden;
+    }
+
 }
