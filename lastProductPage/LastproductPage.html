@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--For bootstrap-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+
+    <!--For icons-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-
+xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+    <title>Bu fırsat kaçmaz!!!</title>
+    <style>
+        /*FIRST_MAIN*/
+#sp-bold {
+    margin-right: 1rem;
+
+    color: black;
+    font-weight: bold;
+}
+.info-container {
+    display: flex;
+    justify-content: space-around;
+}
+.tableInfo{
+    align-items: center;
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+}
+/*SECON_MAIN*/
+.secondMain {
+    padding: 1.5rem;
+    background-color: #eee;
+}
+
+#black {
+    margin: 0;
+    
+    font-weight: bold;
+} #blue {
+    margin: 0;
+
+    color: rgb(0, 72, 255);
+    font-weight: bold;
+}
+
+h2 > span {
+    font-size: 1rem;
+}
+h5 {
+    display: inline-block;
+}
+i.full {
+    color: rgb(255, 196, 0);
+}
+i.half {
+    color: rgb(255, 196, 0);
+}
+i.empty {
+    color: rgb(255, 196, 0);
+}
+.sc1 {
+    display: flex;
+    justify-content: space-between;
+}
+.sc1 > p {
+    margin-bottom: 5px;;
+}
+
+.sc2 {
+    display: inline-flex;
+
+    background: white;
+    
+    border: 1px solid gray;
+
+    padding-left: 5px;
+}
+.sc2 > p {
+    margin: 4px;
+    padding-right: 5px;
+
+    border-right: 1px solid gray;
+
+    font-size: 13px;
+}
+p > span {
+    color: rgb(0, 72, 255);
+    font-weight: bold;
+}
+.greenBtn {
+    padding-top: 0;
+    padding-bottom: 0;
+
+    border: 1px;
+    border-radius: 20%;
+
+    background: green;
+    color: white;
+    font-weight: bold;
+    font-size: 12px;
+}
+.questionBtn {
+    padding-top: 0;
+    padding-bottom: 0;
+
+    border-radius: 100%;
+    border: 1px;
+
+    background: rgb(199, 199, 199);
+    font-size: 10px;
+    font-weight: bold;
+}
+.orangeBtn {
+    padding-top: 0;
+    padding-bottom: 0;
+
+    border-radius: 100%;
+    border: 1px;
+
+    background: rgb(255, 140, 0);
+    color: white;
+    font-size: 10px;
+    font-weight: bold;
+}
+#boldP {
+    border: 0;
+
+    font-weight: bold;
+}
+.greenP {
+    margin-top: 0.5rem;
+
+    color: green;
+
+    font-weight: bold;
+    font-size: 13px;
+}
+.flexx{
+    display: flex;
+}
+.box1 {
+    display: inline-flex;
+
+    background-color: gray;
+
+    border: 2px solid black;
+    border-radius: 5px;
+
+    margin-right: 10px;
+}
+.box1 > button {
+    font-weight: bold;
+
+    padding-left: 10px;
+    padding-right: 10px;
+
+    border: 0;
+}
+.div_btn {
+    display: inline-flex;
+    align-items: center;
+
+    margin: 5px;
+}
+.btnSepet{
+    background-color:rgb(244, 112, 11);
+    color: white;
+    width:150px;
+    margin-left: 15px;
+    height: 50px ;
+    border-radius: 20px;
+    border-color:rgb(244, 112, 11); 
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+.btn1{
+    background-color: rgb(176, 172, 172);
+    font-size: large;
+    font-weight: bold;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border-color:rgb(176, 172, 172) ;
+    width: 50px;
+    height: 50px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius:10px ;
+}
+.btn2{
+    border-color:rgb(176, 172, 172) ;
+    width: 50px;
+    height: 50px;
+}
+.btn3{
+    background-color: rgb(176, 172, 172);
+    font-size: large;
+    font-weight: bold;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border-color:rgb(176, 172, 172) ;
+    width: 50px;
+    height: 50px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius:10px ;
+}
+.box1 > div {
+    font-weight: bold;
+
+    border: 1px;
+    border-radius: 5px;
+}
+.text-center{
+    background-color: white;
+    font-size: 12px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+}
+div.text-center > span {
+    font-size: 12px;
+}
+.box2 {
+    border-radius: 5px;
+    padding: 15px;
+
+    color: white;
+    background: orangered;
+}
+.purple-div {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    background-color: rgb(202, 174, 215);
+    border-color: purple;
+    border-style:solid;
+    text-align: center;
+    border-radius: 10px;
+}
+.p-button1 {
+    border-radius: 100%;
+    border: 1px;
+    font-size: 16px;
+    font-weight: bold;
+}
+.p-button2 {
+    border: 0;
+
+    border-radius: 10px;
+}
+.hrt-book-arr {
+    padding: 10px;
+
+    display: flex;
+    align-items: center;
+}
+.hrt-book-arr > p {
+    margin-right: 25px;
+    margin-bottom: 0;
+
+    color: gray;
+}
+.fa-heart {
+    font-size: 20px;
+}
+.fa-bookmark {
+    font-size: 20px;
+}
+.fa-arrow-right-arrow-left {
+    font-size: 20px;
+}
+.delivery {
+    margin-bottom: 10px;
+    padding: 15px;
+    border-radius: 5px;
+
+    background: white;
+}
+.del1 {
+    display: flex;
+    justify-content: space-between;
+}
+.del1 > h6 {
+    font-weight: bold;
+    margin: 0;
+}
+.del-btn {
+    margin-bottom: 5px;
+    color: orange;
+    background: rgb(249, 240, 222);
+    font-weight: bold;
+
+    border: 0;
+    border-radius: 10px;
+}
+.del2 {
+    display: flex;
+    justify-content: space-between;
+
+    margin-bottom: 10px;
+}
+.img-hepsi {
+    width: 160px;
+    height: 20px;
+}
+#orngBtn {
+    font-weight: bold;
+    color: orange;
+}
+.bottom-btn {
+    padding-left: 8px;
+    padding-right: 8px;
+    
+    font-size: 16px;
+}
+.delivery > div {
+    font-size: 12px;
+}
+.fix {
+    border: 0;
+    padding: 5px;
+}
+.bold{
+    font-weight: bolder;
+    color: black;
+}
+.flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.mbottom {
+    margin-bottom: 0;
+}
+
+/*SMALL_SCREEN_SIZE*/
+@media screen and (max-width: 992px) {
+    .secondMain > h6 {
+        display: none;
+    }
+    .taksit{
+        align-items: center;
+        text-align: center;
+    }
+    .flexx{
+        align-items: center;
+        text-align: center;
+        justify-content: space-around;
+    }
+    .greenP{
+        display: none;
+        visibility: hidden;
+    }
+}
+
+    </style>
+</head>
+
+<body>
+    <div class = "row">
+        <div class = "firstMain col-lg-6">
+            
+            <div class="text-center">
+                <img src="kulaklik.jfif" alt="">
+                <br>
+                <hr>
+            </div>
+            <div class="tableInfo">
+                <div class="leftinfo">
+                    <table>
+                        <tr >
+                            <td class="bold">Çift Telefon Desteği</td>
+                            <td>yok</td>
+                        </tr>
+                        <tr>
+                            <td class="bold">Suya & Tere Dayanıklı</td> 
+                            <td>Hayır</td> 
+                        </tr>
+                        <tr>
+                            <td class="bold"></td> 
+                        </tr>
+                        <tr>
+                            <td class="bold">Kullanım Tipi</td> 
+                            <td>Kulakiçi</td> 
+                        </tr>
+                    </table>
+                </div>
+                <div class="rightinfo">
+                    <table >
+                        <tr >
+                            <td class="bold">Bluetooth Versiyon</td>
+                            <td>5.0</td>
+                        </tr>
+                        <tr>
+                            <td class="bold">Aktif Gürültü Önleme</td> 
+                            <td>Yok</td> 
+                        </tr>
+                        <tr>
+                            <td class="bold">(ANC)</td> 
+                        </tr>
+                    </table>
+                </div>    
+
+            </div>
+        </div>
+
+        <div class = "secondMain col-lg-6">
+            <h6 id="black">TWS i12 Bluetooth 5.0 Kulaklık - Şarj Üniteli </h6>
+            <h6 id="blue">TWS</h6> <br>
+
+            <div class="sc1">
+                <div>
+                    <h2> 115,00 <span class="bold"> TL</span> </h2>
+                </div>
+
+                <div>
+                    <h5>3,5</h5>
+                    <i class="full fa-solid fa-star"></i>
+                    <i class="full fa-solid fa-star"></i>
+                    <i class="full fa-solid fa-star"></i>
+                    <i class="half fa-solid fa-star-half-stroke"></i>
+                    <i class="empty fa-regular fa-star"></i>
+                    <br>
+                    <p class="m-0">7469 Değerlendirme</p>
+                </div>
+            </div>
+
+            <div class="taksit">19 TL x 6 aya varan <span class="bold">Taksitle</span></div>
+            <div class="flexx">
+                <div class="sc2">
+                    <p>Satıcı: <span>SFIT TEKNOLOJI ...</span></p>
+                    <p>Puan <button class="greenBtn">9.4</button> <button class="questionBtn">?</button></p>
+                    <p id="boldP">Kampanyaları Gör <button class="orangeBtn">3</button></p>
+                </div>
+            </div>
+           
+
+            <p class="greenP">Seçili Telefon Alana TWS i12 Bluetooth 5.0 Kulaklık %10 İndirimli!</p>
+            <hr>
+            <div class="flexx">
+                <div class = "div_btn">
+                    <button class = "btn1"> - </button> 
+                    <div class="text-center"> 1 <br> <span>Adet</span></div>
+                    <button class = "btn3"> + </button>
+        
+                    <button class = "btnSepet"><i class="fa-solid fa-cart-shopping white"></i> Sepete Ekle </button>
+                </div>
+            </div>
+            
+
+            <div class="purple-div">
+                <p class="m-0">Eski ürünü yenisi ile değiştirmek ister misin?</p>
+
+                <div>
+                    <button class="p-button1">?</button>
+                    <button class="p-button2">Faydalan</button>
+                </div>
+            </div>
+
+            <div class="hrt-book-arr">
+                <p><i class="fa-regular fa-heart"></i> Beğen</p>
+                <p><i class="fa-regular fa-bookmark"></i> Listeme Ekle</p>
+                <p><i class="fa-solid fa-arrow-right-arrow-left"></i> Karşılaştır</p>
+            </div>
+            <hr>
+
+            <div class="delivery">
+                <div class="del1">
+                    <h6>Teslimat Seçenekleri</h5>
+                    
+                    <button class="del-btn"> <i class="fa-sharp fa-solid fa-location-dot"></i> Konum seç</button>
+                </div>
+
+                <div class="del2">
+                    <p> <span id="sp-bold">Standart teslimat</span> <br> En geç 14 Ekim Cuma günü kargoda</p>
+
+                    <img class="img-hepsi" src="hepsijet.jpg" alt="">
+                </div>
+            </div>
+            
+            <div class="del2">
+                <h5>Diğer Satıcılar - <span id="orngBtn">Tümü (2)</span></h5>
+                <button class ="questionBtn bottom-btn">?</button>  
+            </div>
+
+            <div class="delivery flex">
+                <div>
+                    <button class="greenBtn">9,7</button>
+                    <span id="blue">Torima</span> <br>
+                    <p><span id="sp-bold" class="m-1 mbottom">21 saat 42 dakika</span>içinde sipariş verirsen yarın kargoda</p>
+                </div>
+
+                <h5>148,97 TL</h5>
+
+                <button class="box2 fix">Sepete Ekle</button>
+            </div>
+        </div>
+    </div>
+    
+</body>
+
+</html>
