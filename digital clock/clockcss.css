@@ -1,0 +1,42 @@
+html,
+body{
+    background: url('levander.jpg');
+    height: 100%;
+    margin: 0;
+}
+.mainContainer{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+}
+
+.clockContainer{
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    text-align: center;
+}
+.purpleBox{
+    background: rgba(95, 12, 131, 0.5);
+    width: 100px;
+    height: 100px;
+    color: white;
+    font-weight: bold;
+    font-size:x-large;
+    text-align: center;
+    align-items: center;
+}
+.blueBox{
+    background: rgba(0, 0, 200, 0.5);
+    font-weight:normal;
+    color: white;
+}
+.greenBox{
+    background: rgba(26, 164, 28, 0.5);
+    width: 100px;
+    height: 40px;
+}
