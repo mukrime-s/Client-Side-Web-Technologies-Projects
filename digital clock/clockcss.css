@@ -3,6 +3,11 @@ body{
     background: url('levander.jpg');
     height: 100%;
     margin: 0;
+    background-repeat: no-repeat;
+    background-size: 100% 100%
+}
+html {
+    height: 100%
 }
 .mainContainer{
     height: 100%;
@@ -12,8 +17,8 @@ body{
     justify-content: center;
     color: white;
     text-align: center;
+    margin: 0;
 }
-
 .clockContainer{
     display: flex;
     align-items: flex-end;
@@ -25,10 +30,11 @@ body{
     width: 100px;
     height: 100px;
     color: white;
-    font-weight: bold;
+    font-weight: bolder;
     font-size:x-large;
     text-align: center;
     align-items: center;
+    padding: 40% 0;
 }
 .blueBox{
     background: rgba(0, 0, 200, 0.5);
