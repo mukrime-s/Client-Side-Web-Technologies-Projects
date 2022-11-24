@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="yks-scorecss.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <title>Calculate YKS Scores</title>
+</head>
+<body>
+    <div>
+        <h1 class="mainTitle">2023 YKS,TYT,AYT Puan Hesaplama</h1>
+        <div class="mainContainer p-2"> 
+            <div class="leftpartContainer col-lg-6 divCorners p-2">
+                <span class="altBaslikIsimlendirme"><span class="boldClass"> AYT</span> Puanı Hesaplama</span>
+                <ul class="aytList">
+                    
+                    <li class="greyHeaderClass">Türk Dili ve Edebiyatı ve Sosyal Bilimler-1 Testi</li>
+                    <table class="courseNameTable">
+                        <tr >
+                            <td class="boldClass">Türk Dili ve Edebiyatı</td>
+                            <td><input type="text" name="edebiyatDogru" id="edebiyatDogru" required placeholder=-></td>
+                            <td><input type="text" name="edebiyatYanlis" id="edebiyatYanlis" required placeholder=-></td>
+                        </tr>
+                        <tr>
+                            <td class="blueClass">24 Soru</td>
+                        </tr>
+                        <tr>
+                            <td class="boldClass">Tarih-1</td>
+                            <td><input type="text" name="tarih1Dogru" id="tarih1Dogru" required placeholder=-></td>
+                            <td><input type="text" name="tarih1Yanlis" id="tarih1Yanlis" required placeholder=-></td>
+                        </tr>
+                        <tr>
+                            <td class="blueClass">10 Soru</td>
+                        </tr>
+                        <tr>
+                            <td class="boldClass">Coğrafya-1</td>
+                            <td><input type="text" name="cografya1Dogru" id="cografya1Dogru" required placeholder=-></td>
+                            <td><input type="text" name="cografya1Yanlis" id="cografya1Yanlis" required placeholder=-></td>
+                        </tr>
+                        <tr>
+                            <td class="blueClass">6 Soru</td>
+                        </tr>
+                    </table>
+                    
+                </ul>
+                <br>
+                <ul class="aytList">
+                    <li class="greyHeaderClass">Sosyal Bilimler-2 Testi </li>
+                    <table class="courseNameTable">
+                        <tr>
+                            <td class="boldClass">Tarih-2</td>
+                            <td><input type="text" name="tarih2Dogru" id="tarih2Dogru" required placeholder=-></td>
+                            <td><input type="text" name="tarih2Yanlis" id="tarih2Yanlis" required placeholder=-></td>
+                        </tr>
+                        <tr>
+                            <td class="blueClass">11 Soru</td>
+                        </tr>
+                        <tr>
+                            <td class="boldClass">Coğrafya-2</td>
+                            <td><input type="text" name="cografya2Dogru" id="cografya2Dogru" required placeholder=-></td>
+                            <td><input type="text" name="cografya2Yanlis" id="cografya2Yanlis" required placeholder=-></td>
+                        </tr>
+                        <tr>
+                            <td class="blueClass">11 Soru</td>
+                        </tr>
+                        <tr>
+                            <td class="boldClass">Felsefe Grubu</td>
+                            <td><input type="text" name="felsefeDogru" id="felsefeDogru" required placeholder=-></td>
+                            <td><input type="text" name="felsefeYanlis" id="felsefeYanlis" required placeholder=-></td>
+                        </tr>
+                        <tr>
+                            <td class="blueClass">12 Soru</td>
+                        </tr>
+                        <tr>
+                            <td class="boldClass">Din Kültürü ve Ahlak Bilgisi/Ek Felsefe Grubu</td>
+                            <td><input type="text" name="dinDogru" id="dinDogru" required placeholder=-></td>
+                            <td><input type="text" name="dinYanlis" id="dinYanlis" required placeholder=-></td>
+                        </tr>
+                        <tr>
+                            <td class="blueClass">6 Soru</td>
+                        </tr>
+                    </table>
+                </ul>
+                <ul class="aytList">
+                    <li class="greyHeaderClass">Matematik Testi</li>
+                    <table class="courseNameTable">
+                        <tr>
+                            <td class="boldClass">Matematik</td>
+                            <td><input type="text" name="matematikDogru" id="matematikDogru" required placeholder=-></td>
+                            <td><input type="text" name="matematikYanlis" id="matematikYanlis" required placeholder=-></td>
+                        </tr>
+                        <tr>
+                            <td class="blueClass">40 Soru</td>
+                        </tr>
+                    </table>
+                </ul>
+                <br>
+                <ul class="aytList">
+                    <li class="greyHeaderClass">Fen Bilimleri Testi</li>
+                    <table class="courseNameTable">
+                        <tr>
+                            <td class="boldClass">Fizik</td>
+                            <td><input type="text" name="fizikDogru" id="fizikDogru" required placeholder=-></td>
+                            <td><input type="text" name="fizikYanlis" id="fizikYanlis" required placeholder=-></td>
+                        </tr>
+                        <tr>
+                            <td class="blueClass">14 Soru</td>
+                        </tr>
+                        <tr>
+                            <td class="boldClass">Kimya</td>
+                            <td><input type="text" name="kimyaDogru" id="dinDogru" required placeholder=-></td>
+                            <td><input type="text" name="kimyaYanlis" id="kimyaYanlis" required placeholder=-></td>
+                        </tr>
+                        <tr>
+                            <td class="blueClass">13 Soru</td>
+                        </tr>
+                        <tr>
+                            <td class="boldClass">Biyoloji</td>
+                            <td><input type="text" name="BiyolojiDogru" id="BiyolojiDogru" required placeholder=-></td>
+                            <td><input type="text" name="BiyolojiYanlis" id="BiyolojiYanlis" required placeholder=-></td>
+                        </tr>
+                        <tr>
+                            <td class="blueClass">13 Soru</td>
+                        </tr>
+                    </table>
+                </ul>
+            </div>
+            <div class="rightpartContainer col-lg-6 p-2 flexContainers">
+                <div class="tytContainer divCorners ">
+                    <span class="altBaslikIsimlendirme"><span class="boldClass"> TYT</span> Puanı Hesaplama</span>
+                    <table class="courseNameTable">
+                        <tr>
+                            <td class="boldClass">Türkçe</td>
+                            <td><input type="text" name="TürkçeDogru" id="TürkçeDogru" required placeholder=-></td>
+                            <td><input type="text" name="TürkçeYanlis" id="TürkçeYanlis" required placeholder=-></td>
+                        </tr>
+                        <tr>
+                            <td class="blueClass">40 Soru</td>
+                        </tr>
+                        <tr>
+                            <td class="boldClass">Sosyal Bilimler</td>
+                            <td><input type="text" name="sosyalDogru" id="sosyalDogru" required placeholder=-></td>
+                            <td><input type="text" name="sosyalYanlis" id="sosyalYanlis" required placeholder=-></td>
+                        </tr>
+                        <tr>
+                            <td class="blueClass">20 Soru</td>
+                        </tr>
+                        <tr>
+                            <td class="boldClass">Temel Matematik</td>
+                            <td><input type="text" name="tmatematikDogru" id="tmatematikDogru" required placeholder=-></td>
+                            <td><input type="text" name="tmatematikYanlis" id="tmatematikYanlis" required placeholder=-></td>
+                        </tr>
+                        <tr>
+                            <td class="blueClass">40 Soru</td>
+                        </tr>
+                        <tr>
+                            <td class="boldClass">Fen Bilimleri</td>
+                            <td><input type="text" name="fenDogru" id="fenDogru" required placeholder=-></td>
+                            <td><input type="text" name="fenYanlis" id="fenYanlis" required placeholder=-></td>
+                        </tr>
+                        <tr>
+                            <td class="blueClass">20 Soru</td>
+                        </tr>
+                    </table>
+                </div>
+                <br>
+                <br>
+                <div class="basaripuaniContainer  divCorners flexContainers">
+                    <span class="altBaslikIsimlendirme"><span class="boldClass"> Ortaöğretim</span> Başarı Puanı</span>
+                    <table class="basaripuaniTable">
+                        <tr>
+                            <td class="boldClass">Diploma Notu</td>
+                            <td><input type="text" name="Diplomanotu" id="Diplomanotu" required placeholder=50></td>
+                            
+                        </tr>
+                        <tr>
+                            <td class="boldClass">OBP</td>
+                            <td><input type="text" name="OBP" id="OBP" required placeholder=250></td>
+                            
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox" name="bölümeyerleştim" > Geçen Sene Bir Bölüme Yerleştim</td>
+                        </tr>
+                    </table>
+                </div>
+                <br>
+                <br>
+                <div class="SonuclarContainer divCorners flexContainers">
+                    <span class="altBaslikIsimlendirme"><span class="boldClass"> SONUÇLAR</span> </span>
+                    <table class="sonuclarTable">
+                        <tr>
+                            <td class="boldClass">Puan Türü</td>
+                            <td class="boldClass">Ham Puan</td>
+                            <td class="boldClass">Yerleştirme Puanı</td>
+                        </tr>
+                        <tr >
+                            <td class="boldClass">TYT</td>
+                            <td class="boldClass">-</td>
+                            <td class="boldClass">-</td>
+                        </tr>
+                        <tr >
+                            <td class="boldClass">SAY</td>
+                            <td class="boldClass">-</td>
+                            <td class="boldClass">-</td>
+                        </tr>
+                        <tr >
+                            <td class="boldClass">EA</td>
+                            <td class="boldClass">-</td>
+                            <td class="boldClass">-</td>
+                        </tr>
+                        <tr >
+                            <td class="boldClass">SÖZ</td>
+                            <td class="boldClass">-</td>
+                            <td class="boldClass">-</td>
+                        </tr>
+                    </table>
+                </div>
+                <br>
+                <div class="btnContainer ">
+                    <input type="button" id="btnHesapla" name="Hesapla"class="btnHesapla" value="Hesapla">
+                    <input type="button" id="btnTemizle" name="Temizle"class="btnTemizle" value="Temizle">
+                </div>   
+            </div>
+            
+         </div>
+    </div>
+    
+    
+    
+</body>
+</html>
