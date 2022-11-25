@@ -19,9 +19,8 @@
     text-align: center;
     align-items: center;
 }
-.altBaslikIsimlendirme{
+.subheadingNaming{
     font-size: x-large;
-    text-align: center;
     align-items: center;
 }
 .aytList{
@@ -36,19 +35,23 @@
     padding: 0%;
 }
 .courseNameTable{
-    width: 100%;
+    width: 80%;
 }
+td {
+    height: 50px;
+    width: 100px;
+  }
 .courseNameTable tr:nth-child(even) {/*used to create the line under the headers.The reason I use double is because 2 lines need a line */
     border-bottom: 1px solid rgb(202, 198, 198);
     text-align: left;
     padding: 0.25em;
     width: 100%;
 }
-.basaripuaniTable th, .basaripuaniTable td {/*used to create the line under the headers*/
+.successScoreTable th, .successScoreTable td {/*used to create the line under the headers*/
     border-bottom: 1px solid rgb(202, 198, 198);
     width: 100%;
 }
- .sonuclarTable th, .sonuclarTable td {
+ .resultTable th, .resultTable td {
     border-bottom: 1px solid rgb(202, 198, 198);
     width: 100%;
  } 
@@ -58,17 +61,31 @@
     list-style-type:none;
     padding: 0%;
 }
-input[type=text], select {
+input::-webkit-inner-spin-button {
+    /*-webkit-appearance: none;*/
+
+    margin: 0;
+}
+input[type=number], select {
+
     display: inline-block;
     width: 100px;
     border-radius: 7px;
     border-color:  rgba(176, 174, 174, 0.75);
     box-shadow: 0px 11px 5px 0px rgba(215, 213, 213, 0.75); 
-  }
+} 
+input[type=number]::-webkit-inner-spin-button,   /* Chrome, Safari, Edge, Opera */
+input[type=number]::-webkit-outer-spin-button { /* this part is for remove spin*/
+  -webkit-appearance: none; 
+  margin: 0;
+}
+input[type=number] { /* Firefox */
+  -moz-appearance: textfield;/* this part is for remove spin*/
+}
   .btnContainer{
     display: flex;
     justify-content: space-between;
-  }
+}
 input.btnHesapla{
     width: 200px;
     background-color: #c50c3a;
