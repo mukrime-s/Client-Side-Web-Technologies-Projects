@@ -1,0 +1,133 @@
+.mainContainer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: row;
+    background-color: rgb(236, 231, 231);
+}
+.divCorners{
+    border-radius: 10px ;
+    background-color: white;
+}
+.flexContainers{
+    display: flex;
+    flex-direction: column;
+}
+.mainTitle{
+    display: block;
+    text-align: center;
+    align-items: center;
+}
+.subheadingNaming{
+    font-size: x-large;
+    text-align: center;
+    align-items: center;
+}
+.aytList{
+    padding: 0%;
+}
+.boldClass{/*for make text bold*/
+    font-weight: bold;
+}
+.blueClass{ /*created to make the number of questions blue*/
+    color: rgb(4, 4, 162);
+    font-size: small;
+    padding: 0%;
+}
+.courseNameTable{
+    width: 80%;
+}
+td {
+    height: 50px;
+    width: 100px;
+  }
+.resultTable{
+    
+    width: 80%;
+}
+td {
+    height: 50px;
+    width: 100px;
+  }
+
+.successScoreTable{
+    
+    width: 80%;
+}
+td {
+    height: 50px;
+    width: 100px;
+  }
+.courseNameTable tr:nth-child(even) {/*used to create the line under the headers.The reason I use double is because 2 lines need a line */
+    border-bottom: 1px solid rgb(202, 198, 198);
+    text-align: left;
+    padding: 0.25em;
+    width: 100%;
+}
+.successScoreTable th, .successScoreTable td {/*used to create the line under the headers*/
+    border-bottom: 1px solid rgb(202, 198, 198);
+    width: 100%;
+}
+ .resultTable th, .resultTable td {
+    border-bottom: 1px solid rgb(202, 198, 198);
+    width: 100%;
+ } 
+.greyHeaderClass{
+    color: gray;
+    font-weight: bold;
+    list-style-type:none;
+    padding: 0%;
+}
+input::-webkit-inner-spin-button {
+    /*-webkit-appearance: none;*/
+
+    margin: 0;
+}
+input[type=number], select {
+
+    display: inline-block;
+    width: 100px;
+    border-radius: 7px;
+    border-color:  rgba(176, 174, 174, 0.75);
+    box-shadow: 0px 11px 5px 0px rgba(215, 213, 213, 0.75); 
+} 
+input[type=number]::-webkit-inner-spin-button,   /* Chrome, Safari, Edge, Opera */
+input[type=number]::-webkit-outer-spin-button { /* this part is for remove spin*/
+  -webkit-appearance: none; 
+  margin: 0;
+}
+input[type=number] { /* Firefox */
+  -moz-appearance: textfield;/* this part is for remove spin*/
+}
+  .btnContainer{
+    display: flex;
+    justify-content: space-between;
+}
+input.btnHesapla{
+    width: 200px;
+    background-color: #c50c3a;
+    border: none;
+    color: white;
+    border-radius: 4px;
+}
+input.btnTemizle{
+    width: 200px;
+    background-color: white;
+    color: #c50c3a;
+    border-color: #c50c3a;
+    border-radius: 4px;
+}
+
+input.btnTemizle:hover {
+    background-color: #c50c3a ;
+    border-color: white;
+    color: white
+  }
+@media screen and (max-width: 992px) {/*small screen size*/
+   
+}
+
+@media screen and (max-width: 992px) {/*medium-large screen size*/
+   
+}
