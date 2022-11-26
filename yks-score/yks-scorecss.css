@@ -21,6 +21,7 @@
 }
 .subheadingNaming{
     font-size: x-large;
+    text-align: center;
     align-items: center;
 }
 .aytList{
@@ -35,6 +36,23 @@
     padding: 0%;
 }
 .courseNameTable{
+    width: 80%;
+}
+td {
+    height: 50px;
+    width: 100px;
+  }
+.resultTable{
+    
+    width: 80%;
+}
+td {
+    height: 50px;
+    width: 100px;
+  }
+
+.successScoreTable{
+    
     width: 80%;
 }
 td {
@@ -100,6 +118,7 @@ input.btnTemizle{
     border-color: #c50c3a;
     border-radius: 4px;
 }
+
 input.btnTemizle:hover {
     background-color: #c50c3a ;
     border-color: white;

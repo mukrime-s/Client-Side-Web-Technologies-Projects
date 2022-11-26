@@ -23,46 +23,49 @@ function calcNet(num1, num2) {
 */
 
 elem.onclick = function() {
-    //-------this step is for tyt----------------------------------
-    var TurkceDogru = Number(document.getElementById("TurkceDogru").value);
+ /**
+* @brief  Calculations and warnings in tyt subtitle
+*/
+    var TurkceDogru = Number(document.getElementById("TurkceDogru").value); //turkce net calculated
     var TurkceYanlis = Number(document.getElementById("TurkceYanlis").value);
     var Turkcenet = TurkceDogru   -  TurkceYanlis   *   0.25
     document.getElementById("tytTurkceNet").innerHTML =Turkcenet;
     var turkceToplam=TurkceDogru+TurkceYanlis
-    if(turkceToplam>40){
+    if(turkceToplam>40){//turkce alert
         window.alert("Toplamda 40 soru girebilirsin.");
         document.getElementById("TurkceDogru").innerText =" ";
         document.getElementById("TurkceYanlis").innerText =" ";
     }
     
-    var sosyalDogru = Number(document.getElementById("sosyalDogru").value);
+    var sosyalDogru = Number(document.getElementById("sosyalDogru").value);//social net calculated
     var sosyalYanlis = Number(document.getElementById("sosyalYanlis").value);
     var sosyalnet = sosyalDogru   -  sosyalYanlis   *   0.25
     document.getElementById("tytSosyalNet").innerHTML =sosyalnet;
-    var sosyalToplam=sosyalDogru+sosyalYanlis
+    var sosyalToplam=sosyalDogru+sosyalYanlis//social alert
     if(sosyalToplam>20){
         window.alert("Toplamda 20 soru girebilirsin.");
     }
 
-    var tmatematikDogru = Number(document.getElementById("tmatematikDogru").value);
+    var tmatematikDogru = Number(document.getElementById("tmatematikDogru").value);//math net calculated
     var tmatematikYanlis = Number(document.getElementById("tmatematikYanlis").value);
     var tmatematiknet = tmatematikDogru   -  tmatematikYanlis   *   0.25
     document.getElementById("tytTmatematikNet").innerHTML =tmatematiknet;
     var tmatematikToplam=tmatematikDogru+tmatematikYanlis
-    if(tmatematikToplam>40){
+    if(tmatematikToplam>40){//math alert
         window.alert("Toplamda 40 soru girebilirsin.");
     }
 
-    var fenDogru = Number(document.getElementById("fenDogru").value);
+    var fenDogru = Number(document.getElementById("fenDogru").value);//science net calculated
     var fenYanlis = Number(document.getElementById("fenYanlis").value);
     var fennet = fenDogru   -  fenYanlis   *   0.25
     document.getElementById("tytFenNet").innerHTML =fennet;
     var fenToplam=fenDogru+fenYanlis
-    if(fenToplam>20){
+    if(fenToplam>20){//science alert
         window.alert("Toplamda 20 soru girebilirsin.");
     }
-    //-------this step is for ayt----------------------------------
-
+/**
+* @brief  Calculations and warnings in ayt subtitle
+*/
     var edebiyatDogru = Number(document.getElementById("edebiyatDogru").value);
     var edebiyatYanlis = Number(document.getElementById("edebiyatYanlis").value);
     var aytEdebiyatNet = edebiyatDogru   -  edebiyatYanlis   *   0.25
@@ -162,26 +165,87 @@ elem.onclick = function() {
         window.alert("Toplamda 13 soru girebilirsin.");
     }
 
-    
-    //--------this step is for total net---------------------
-    var tytnet= Turkcenet + sosyalnet + tmatematiknet + fennet;
-    document.getElementById("tytnet").innerHTML =tytnet;
 
-
-    //-----this part is for obp alert----------
+/**
+* @brief  obp alert added
+*/
     var OBP = Number(document.getElementById("OBP").value);
     var OBP;
     if(OBP<0 ||OBP>100){
         window.alert("OBP Puanı 0-100 aralığında olmalıdır");
     }
-    //------------tyt ham puan-----------
+    
+/**
+* @brief  diploma grade calculated
+*/
+    var OBP = Number(document.getElementById("OBP").value);
+    OBP=5*Diplomanotu
+    document.getElementById("Diplomanotu").innerHTML =Diplomanotu;
+ 
+
+
+    
+}
+/**
+* @brief  cleared all textboxes with clear button
+*/
+//TODO
+
+/**
+* @brief  the results are calculated with the calculate button
+*/
+var submit=document.getElementById("btnHesapla")
+submit.onclick=function (){
+/**
+* @brief  raw score and placement score calculated
+*/ 
     var tytHam= Turkcenet + sosyalnet + tmatematiknet + fennet;
     tytHam=tytHam*5
-    document.getElementById("tytHam").innerHTML =tytHam;
 
-    //------------ayt say ham puan-----------
-    var aytsayHam= aytMatematikNet + aytFizikNet + aytKimyaNet + aytBiyolojiNet;
-    aytsayHam=aytsayHam*6.25;
-    aytsayHam=0.6*aytsayHam+0.4*tytHam;
-    document.getElementById("aytsayHam").innerHTML =aytsayHam;
+    if(document.getElementById("checkbox").checked = true){  //If the checkbox is checked, the score calculation is done as in this section.
+        var tytYerlestirme=Diplomanotu*0.3+tytHam;
+    }
+    else{//Default score calculation
+        var tytYerlestirme=Diplomanotu*0.6+tytHam 
+    }
+ 
+    var sayHam= aytMatematikNet + aytFizikNet + aytKimyaNet + aytBiyolojiNet; //say ham
+    sayHam=sayHam*6.25;
+    sayHam=0.6*sayHam+0.4*tytHam;
+
+    if(document.getElementById("checkbox").checked = true){  //If the checkbox is checked, the score calculation is done as in this section.
+        var sayYerlestirme=Diplomanotu*0.3+sayHam;
+    }
+    else{//Default score calculation
+        var sayYerlestirme=Diplomanotu*0.6+sayHam 
+    }
+
+    var sözHam= aytEdebiyatNet + aytTarih1Net + aytCografya1Net + aytTarih2Net+aytCografya2Net+aytFelsefeNet+aytDinNet;
+    sözHam=sözHam*6.25;
+    sözHam=0.6*sözHam+0.4*tytHam;
+
+    if(document.getElementById("checkbox").checked = true){  //If the checkbox is checked, the score calculation is done as in this section.
+        var sözYerlestirme=Diplomanotu*0.3+sözHam;
+    }
+    else{//Default score calculation
+        var sözYerlestirme=Diplomanotu*0.6+sözHam ;
+    }
+
+    var eaHam=(sözHam+12.5*aytMatematikNet)*0.5
+    
+    if(document.getElementById("checkbox").checked = true){  //If the checkbox is checked, the score calculation is done as in this section.
+        var eaYerlestirme=Diplomanotu*0.3+eaHam;
+    }
+    else{//Default score calculation
+        var eaYerlestirme=Diplomanotu*0.6+eaHam 
+    }
+
+    document.getElementById("tytHam").innerHTML = tytHam;
+    document.getElementById("tytYerlestirme").innerHTML = tytYerlestirme;
+    document.getElementById("sayHam").innerHTML = sayHam;
+    document.getElementById("sayYerlestirme").innerHTML = sayYerlestirme;
+    document.getElementById("eaHam").innerHTML = eaHam;
+    document.getElementById("eaYerlestirme").innerHTML = eaYerlestirme;
+    document.getElementById("sözHam").innerHTML = sözHam;
+    document.getElementById("sözYerlestirme").innerHTML = sözYerlestirme;
 }
