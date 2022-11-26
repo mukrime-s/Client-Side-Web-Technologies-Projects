@@ -12,7 +12,7 @@
         <div class="mainContainer p-2"> 
             <div class="leftpartContainer col-lg-6 divCorners p-2">
                 
-                <span class="subheadingNaming"><span class="boldClass"> AYT </span> Puanı Hesaplama</span>
+                <span class="subheadingNaming"><span class="boldClass" > AYT </span> Puanı Hesaplama</span>
                 <ul class="aytList">
                     <table class="courseNameTable">
                         <tr>
@@ -148,6 +148,12 @@
                     <span class="subheadingNaming"><span class="boldClass"> TYT </span> Puanı Hesaplama</span>
                     <table class="courseNameTable">
                         <tr>
+                            <td></td>
+                            <td><i class="bi bi-check Icon"></i></td>
+                            <td><i class="bi bi-x"></i></td>
+                            <td>Net</td>
+                        </tr> 
+                        <tr>
                             <td class="boldClass">Türkçe</td>
                             <td><input type="number" name="TurkceDogru" id="TurkceDogru" required placeholder=-></td>
                             <td><input type="number" name="TurkceYanlis" id="TurkceYanlis" required placeholder=-></td>
@@ -197,11 +203,11 @@
                         </tr>
                         <tr>
                             <td class="boldClass">OBP</td>
-                            <td><input type="number" name="OBP" id="OBP" required placeholder=250></td>
+                            <td><input readonly type="number" name="OBP" id="OBP" required placeholder=250></td>
                             
                         </tr>
                         <tr>
-                            <td><input type="checkbox" name="bölümeyerleştim" > Geçen Sene Bir Bölüme Yerleştim</td>
+                            <td><input type="checkbox" id="checkbox" name="bölümeyerleştim" > Geçen Sene Bir Bölüme Yerleştim</td>
                         </tr>
                     </table>
                 </div>
@@ -239,8 +245,8 @@
                 </div>
                 <br>
                 <div class="btnContainer ">
-                    <input type="button" id="btnHesapla" name="Hesapla"class="btnHesapla" value="Hesapla">
-                    <input type="button" id="btnTemizle" name="Temizle"class="btnTemizle" value="Temizle">
+                    <input type="button" id="btnHesapla" name="Hesapla"class="btnHesapla" value="Hesapla" >
+                    <input type="button" id="btnTemizle" name="Temizle"class="btnTemizle" value="Temizle" >
                 </div>   
             </div>
             
