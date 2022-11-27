@@ -1,10 +1,15 @@
+
 .mainContainer{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    align-items: flex-start;
+    align-items: stretch;
     flex-direction: row;
+
     background-color: rgb(236, 231, 231);
+}
+.rightpartContainer {
+    justify-content: space-between;
 }
 .divCorners{
     border-radius: 10px ;
@@ -32,8 +37,10 @@
 }
 .blueClass{ /*created to make the number of questions blue*/
     color: rgb(4, 4, 162);
-    font-size: small;
+    font-size: 1rem;
     padding: 0%;
+
+    text-align: left;
 }
 .courseNameTable{
     width: 80%;
@@ -41,26 +48,49 @@
 td {
     height: 50px;
     width: 100px;
-  }
+}
 .resultTable{
-    
+    font-size: 1.2rem;
     width: 80%;
 }
 td {
     height: 50px;
     width: 100px;
-  }
-
+}
+td:last-child {
+    text-align: center;
+}
 .successScoreTable{
-    
+    font-size: 1.2rem;
     width: 80%;
 }
-td {
-    height: 50px;
-    width: 100px;
-  }
+input {
+    text-align: center;
+}
+.Icon {
+    font-size: 2.5rem;
+}
+.marked > i {
+    position: absolute;
+
+    font-size: 2rem;
+    margin-left: 4.5rem;
+}
+.marked > .bi-check {
+    color: green;
+}
+.marked > .bi-x {
+    color: red;
+}
+.net-info > td:last-child {
+    font-size: 1.5rem;
+}
+.courseNameTable {
+    font-size: 1.2rem;
+}
 .courseNameTable tr:nth-child(even) {/*used to create the line under the headers.The reason I use double is because 2 lines need a line */
     border-bottom: 1px solid rgb(202, 198, 198);
+
     text-align: left;
     padding: 0.25em;
     width: 100%;
@@ -74,8 +104,11 @@ td {
     width: 100%;
  } 
 .greyHeaderClass{
+    display: inline-block;
+
     color: gray;
     font-weight: bold;
+    font-size: 1.2rem;
     list-style-type:none;
     padding: 0%;
 }
@@ -118,16 +151,8 @@ input.btnTemizle{
     border-color: #c50c3a;
     border-radius: 4px;
 }
-
 input.btnTemizle:hover {
     background-color: #c50c3a ;
     border-color: white;
     color: white
-  }
-@media screen and (max-width: 992px) {/*small screen size*/
-   
-}
-
-@media screen and (max-width: 992px) {/*medium-large screen size*/
-   
 }
