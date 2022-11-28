@@ -1,0 +1,72 @@
+/*The transition part*/
+* {
+    transition-duration: 0.5s;
+}
+
+/*Makes the body as a hole page*/
+html, body{
+    margin: 0;
+    height: 100%;
+}
+
+/*Makes the calculator vertically and horizontally aligned in center*/
+body {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+
+/*Calculator's size*/
+.calculator {
+    height: 400px;
+    width: 360px;
+}
+
+/*Header part*/
+.head-container{
+    display: flex;
+    justify-content: space-between;
+
+    /*360(base) - 2*8(padding) - 2*2.4 (borderline)*/
+    width: 339.2px; 
+    height: 2rem;
+}
+/*When the mouse is over the rotating arrow icon*/
+.fa-arrow-rotate-right:hover {
+    cursor: pointer;
+
+    color: #140CEF;
+}
+
+/*Icon font sizing*/
+.icons{
+    font-size: 1.3rem;
+}
+
+/*Screen displaying*/
+.screen-container{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: flex-end;
+
+    /*360(base) - 2*8(padding) - 2*2.4 (borderline)*/
+    width: 339.2px;
+    height: 6rem;
+}
+.numbers {
+    margin: 0;
+}
+
+/*Default button displaying*/
+.btn {
+    padding: 0;
+    font-weight: 700;
+
+    max-width:76px ;
+    height: 53px;
+    
+    font-size: 1.2rem;
+    border-radius: 0.3rem;
+}

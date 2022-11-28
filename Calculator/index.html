@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!--Bootstrap CSS Framework reference-->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <!--CSS reference for using some icons-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-
+        xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+        <!--Our three CSS files, common keeps the basic structure, second CSS is for the theme-->
+        <link rel="stylesheet" href="common.css">
+        <link rel="stylesheet" href="light.css" id="themeRef">
+        
+        <title>Basic Calculator</title>
+    </head>
+
+    <body>
+        <!--Main container-->
+        <div class="calculator mt-2 p-2">
+            <!--Header part-->
+            <div class="head-container">
+                
+                <h5 class="m-0">Calculator</h5>
+                <div class="icons">
+                    <i class="fa-sharp fa-solid fa-arrow-rotate-right"></i>
+                    <i class="fa-sharp fa-solid fa-sun" id="theme"></i>
+                </div>
+            </div>
+
+            <!--The part that display numbers and operations on screen-->
+            <div class="screen-container pt-2 pr-2">
+                <p class="numbers" id="memory"></p>
+                <h2 class="numbers" id="result"></h2>
+            </div>
+
+            <!--All keypad elements are initialized in here-->
+            <!--With row class and col-3, we displayed the buttons 4x4-->
+            <div class="keypad-container row pl-3 pr-3 pt-2 pb-2">
+                <button id="btn7" class="btn col-3 m-1">7</button>
+                <button id="btn8" class="btn col-3 m-1">8</button>
+                <button id="btn9" class="btn col-3 m-1">9</button>
+                <button id="btnDiv" class="btn col-3 m-1">/</button>
+
+                <button id="btn4" class="btn col-3 m-1">4</button>
+                <button id="btn5" class="btn col-3 m-1">5</button>
+                <button id="btn6" class="btn col-3 m-1">6</button>
+                <button id="btnMult" class="btn col-3 m-1">*</button>
+
+                <button id="btn1" class="btn col-3 m-1">1</button>
+                <button id="btn2" class="btn col-3 m-1">2</button>
+                <button id="btn3" class="btn col-3 m-1">3</button>
+                <button id="btnSubt" class="btn col-3 m-1">-</button>
+
+                <button id="btn0" class="btn col-3 m-1">0</button>
+                <button id="btnClear" class="btn col-3 m-1">C</button>
+                <button id="btnEqual" class="btn btn-equal col-3 m-1">=</button>
+                <button id="btnAdd" class="btn col-3 m-1">+</button>
+            </div>
+        </div>
+
+        <!--The javascript file for making the operations and changing themes-->
+        <script src="script.js"></script>
+    </body>
+</html>

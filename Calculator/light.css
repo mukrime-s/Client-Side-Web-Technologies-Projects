@@ -1,0 +1,21 @@
+/*Light theme settings are here for light theme*/
+.calculator {
+    border: solid black;
+    background-color: #eee;
+}
+
+.screen-container {
+    border: solid black 0.3rem;
+
+    background-color: #74C1F0;
+}
+
+.btn {
+    background-color: #CCCCCC;
+}
+.btn:hover {
+    background-color: #666666;
+}
+.btn-equal {
+    background-color: #74C1F0;
+}
