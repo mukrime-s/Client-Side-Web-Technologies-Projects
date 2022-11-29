@@ -29,6 +29,8 @@ function netYazma(cnt){
 var Diplomanotu
 let body = document.querySelector('body');
 body.onclick = function() {
+    document.getElementById("Diplomanotu").value=50;
+    document.getElementById("OBP").value=250;
  /**
 * @brief  Calculations and warnings
 */  
@@ -41,7 +43,7 @@ body.onclick = function() {
     Diplomanotu = Number(document.getElementById("Diplomanotu").value);
     if(Diplomanotu < 0 || Diplomanotu > 100){
         window.alert("Diploma Notu 0-100 aralığında olmalıdır");
-        document.getElementById("Diplomanotu").value=0;
+        document.getElementById("Diplomanotu").value=50;
     }
 /**
 * @brief  OBP grade calculated
@@ -58,6 +60,17 @@ temizle.onclick=function (){
         document.getElementById(matrix[0][i]+"Dogru").value='-';
         document.getElementById(matrix[0][i]+"Yanlis").value='-';
     }
+
+    document.getElementById("Diplomanotu").value=50
+    document.getElementById("OBP").value=250
+    document.getElementById("tytHam").innerHTML = '-';
+    document.getElementById("tytYerlestirme").innerHTML = '-';
+    document.getElementById("sayHam").innerHTML = '-';
+    document.getElementById("sayYerlestirme").innerHTML = '-'; 
+    document.getElementById("eaHam").innerHTML = '-';
+    document.getElementById("eaYerlestirme").innerHTML = '-';
+    document.getElementById("sözHam").innerHTML = '-';
+    document.getElementById("sözYerlestirme").innerHTML = '-';
 }
 
 /**
