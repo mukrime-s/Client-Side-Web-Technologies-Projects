@@ -58,6 +58,9 @@ temizle.onclick=function (){
         document.getElementById(matrix[0][i]+"Dogru").value='-';
         document.getElementById(matrix[0][i]+"Yanlis").value='-';
     }
+
+    document.getElementById("Diplomanotu").value=0
+    document.getElementById("OBP").value=0
 }
 
 /**
