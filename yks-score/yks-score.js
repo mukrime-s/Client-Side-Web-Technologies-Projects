@@ -38,7 +38,7 @@ body.onclick = function() {
         netYazma(i);
     }
 /** 
-* @brief  obp alert added
+* @brief  OBP alert added
 */  
     Diplomanotu = Number(document.getElementById("Diplomanotu").value);
     if(Diplomanotu < 0 || Diplomanotu > 100){

@@ -42,7 +42,9 @@ for(let i=0;i<keypad.length;i++){
         //If the user presses any operator button
         else if(i>11)   {currentState=2}
         //If the user presses the equal button
-        else if(i==11)  {if(currentState==3) {currentState=0}}
+        else if(i==11)  {
+            if(currentState==3) {currentState=0}
+            else if(currentState==1){currentState=0}}
         //If the user presses the clear(C) button
         else{currentState=0}
 
@@ -60,6 +62,10 @@ for(let i=0;i<keypad.length;i++){
                 }
                 //If the pressed button is equal(=) 
                 else{
+                    if (operations.length < 1) {
+                        break;
+                    }
+
                     inputNumbers.push(tempInputs[tempInputs.length-1])
                     for(let k=0;k<operations.length;k++){
                         //Multiplication and division operations must be done first, this part of code makes that
