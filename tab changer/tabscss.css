@@ -29,6 +29,9 @@ body {
 .tab button :last-child{
   border: pink;
 }
+.lastbtn{
+  border-right: none ;
+}
 .tab button:hover {
   background-color: #ddd;
 }
