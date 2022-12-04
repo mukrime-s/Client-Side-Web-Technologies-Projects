@@ -29,9 +29,7 @@ function netYazma(cnt){
 var Diplomanotu
 let body = document.querySelector('body');
 body.onclick = function() {
-    document.getElementById("Diplomanotu").value=50;
-    document.getElementById("OBP").value=250;
- /**
+/**
 * @brief  Calculations and warnings
 */  
     for(let i=0; i<matrix[0].length;i++){
