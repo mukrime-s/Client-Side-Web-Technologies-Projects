@@ -1,0 +1,105 @@
+.mainContainer{
+    margin: auto;
+}
+.usernameClass{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+.btnExit{
+    background-color: gray;
+    color: white;
+    width: 75px;
+    height: 30px;
+    border-radius: 7px;
+    border: none;
+}
+.pageTitleContainer{
+    display: flex;
+
+}
+.titlefontSettings{
+    font-size: larger;
+}
+.studentlistClass{
+    display: flex;
+    justify-content: space-between;
+}
+.addpersoniconStyle{
+    font-size: x-large;
+    background-color: rgb(87, 87, 245);
+    color: white;
+    border-radius: 7px;
+    height: 50px;
+    width: 50px;
+    align-items: center;
+    text-align: center;
+}
+#pageNums{
+    display: flex;
+    justify-content: center;
+}
+.infocircleSettings{
+    background-color: blue;
+    color: white;
+    font-size: larger;
+    border-radius: 50%;
+}
+.btnAdd{
+    background-color: blue;
+    color: white;
+    border-radius: 7px;
+    border: none;
+    width: 50px;
+    height: 40px;
+}
+.btnClose{
+    background-color: gray;
+    color: white;
+    border-radius: 7px;
+    border: none;
+    width: 60px;
+    height: 40px;
+}
+.btnPageNumber {
+    margin: auto;
+    width: 40px;
+    height: 40px;
+    border-radius: 7px;
+    background-color: white;
+    border:solid gray;
+    font-size: 20px;
+    color: black;
+}
+.btnPageNumber.active {
+    background-color: blue;
+    color: white;
+}
+.btnSil{
+    color: white;
+    background-color: red;
+    border-radius: 10px;
+    width: 75px;
+    height: 40px;
+}
+.btnDüzenle{
+    color: white;
+    background-color: blue;
+    border-radius: 10px;
+    width: 75px;
+    height: 40px;
+}
+.btnDüzenle{
+    color: white;
+    background-color: blue;
+    border-radius: 10px;
+    width: 75px;
+    height: 40px;
+}
+.btnDetay{
+    color: white;
+    background-color: green;
+    border-radius: 10px;
+    width: 75px;
+    height: 40px;
+}
