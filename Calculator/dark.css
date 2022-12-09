@@ -1,4 +1,8 @@
 /*Dark theme settings are here for dark theme*/
+body {
+    background-color:  #333333;
+}
+
 .calculator {
     border: solid white;
     background-color: #333333;

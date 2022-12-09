@@ -98,6 +98,9 @@ th,td{
 .limiter-buttons > button:nth-child(1){
     border-top-left-radius: 0.3125rem;
     border-bottom-left-radius: 0.3125rem;
+    /*initial colors for first limiter button*/
+    background-color: blue;
+    color: white;
 }
 .limiter-buttons > button:nth-child(2){
     border-left: 0;
