@@ -1,0 +1,319 @@
+.nav-bar > p {
+    font-size: 1rem ;
+    font-weight: bold;    
+    display: flex;
+    justify-content: flex-end;
+    margin: 0;
+}
+img{    
+    height: 4rem;
+    width: 4rem;
+    vertical-align:middle;
+}
+.bottom-nav-bar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;    
+}
+.bottom-nav-bar > button{
+    background-color: #777777;
+    color: #FFFFFF;
+    border: 0;
+    border-radius: 0.3125rem;
+    height: 2rem;
+}
+
+.page-info{
+    display: inline-block;
+    vertical-align: middle;
+}
+.student-list-header{
+    display: flex;
+    justify-content: space-between;
+}
+.student-list-header > button{
+    background-color: rgb(55, 94, 250) ;
+    color: #FFFFFF;
+    border: 0;
+    border-radius: 0.3125rem;
+    height: 2rem;
+}
+
+tbody:nth-child(odd){
+    background-color: rgba(43, 64, 226, 0.25);
+}
+td > button{
+    color: #FFFFFF;
+    border: 0;
+    border-radius: 0.3125rem;
+    width: 5rem;
+    height: 2rem;
+}
+
+td >button:nth-child(1){
+    background-color: red;
+}
+td >button:nth-child(2){
+    background-color: blue;
+}
+td >button:nth-child(3){
+    background-color: green;
+}
+
+.student-list{
+    width: 100%;
+}
+.table-header{
+    background-color: #EEE;
+}
+th,td{
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+}
+
+.footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #EEE;
+}
+.page-buttons > button {
+    
+    border: solid black 0.08rem;
+    border-radius: 0.3125rem;
+    margin: 0.25rem;
+
+}
+
+.limiter-buttons{
+
+    display: flex;
+}
+.limiter-buttons > button{
+
+    border: solid rgb(0, 72, 255);
+    color: rgb(0, 72, 255);
+    width: 2rem;
+    padding: 0;
+    margin: 0;
+}
+.limiter-buttons > button:nth-child(1){
+    border-top-left-radius: 0.3125rem;
+    border-bottom-left-radius: 0.3125rem;
+    /*initial colors for first limiter button*/
+    background-color: blue;
+    color: white;
+}
+.limiter-buttons > button:nth-child(2){
+    border-left: 0;
+    border-right: 0;
+    width: 1.8rem ;
+}
+.limiter-buttons > button:nth-child(3){
+    border-top-right-radius: 0.3125rem;
+    border-bottom-right-radius: 0.3125rem;
+}
+
+@media screen and (max-width: 992px) {
+    tr > th:nth-child(3) {
+        display: none;
+    }
+    tr > td:nth-child(3) {
+        display: none;
+    }
+}
+@media screen and (max-width: 768px) {
+    tr > th:nth-child(2) {
+        display: none;
+    }
+    tr > td:nth-child(2) {
+        display: none;
+    }
+}
+
+
+.delete-pop-up {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+  /* Modal Content/Box */
+  .delete-pop-up-content {
+    background-color: #fefefe;
+    margin: 1% auto; /* 15% from the top and centered */
+    border: 1px solid #888;
+    border-radius: 1rem;
+    width: 40%; /* Could be more or less, depending on screen size */
+  }
+  /* The Close Button */
+  .close-pop-up {
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  .close-pop-up:hover,
+  .close-pop-up:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+.delete-pop-up-buttons{ 
+    display: flex;
+    justify-content: flex-end;
+}
+.delete-pop-up-buttons button {
+    border-radius: 0.4rem;
+    border: 0;
+    width: 4rem;
+    height: 2rem;
+    font-size: 0.9rem;
+    font-weight: 400;
+}
+.delete-pop-up-buttons button:nth-child(1){
+    background-color: rgb(201, 201, 201);
+    color: white;
+}
+.delete-pop-up-buttons button{
+    background-color: rgb(204, 60, 60);
+    color: white;
+}
+.delete-pop-up-header{
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-between;
+}
+.delete-pop-up-header-inner{
+    display: flex;
+    align-items: center;
+    font-weight: bolder;
+}
+.delete-pop-up-header-inner> svg{
+    color: red;
+}
+
+/*default MODAL*/
+
+
+.default-modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0,0,0,0.7); /* Black w/ opacity */
+}
+  /* Modal Content/Box */
+
+.default-modal-content {
+    background-color: #fefefe;
+    margin: 3% auto; /* 15% from the top and centered */
+    border: 1px solid #888;
+    border-radius: 0.4rem;
+    width: 25rem; /* Could be more or less, depending on screen size */
+}
+.default-modal-content-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: larger;
+}
+.header-content > svg{
+    color: blue;
+}
+.default-modal-rows{
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    margin-top: 1rem;
+}
+.default-modal-text-input{
+    width: 11rem;
+    border: 0.1rem solid rgba(197, 197, 197,0.55);
+    padding: 0.25rem;
+    border-radius: 0.4rem;
+}
+.default-modal-rows-text{
+    margin: 0;
+}
+.default-modal-content-footer{
+    margin-top: 2rem;
+    display: flex;
+    justify-content: flex-end;
+}
+.default-modal-footer-buttons{
+    border-radius: 0.4rem;
+    border: 0;
+    width: 4rem;
+    height: 2rem;
+    font-size: 0.9rem;
+    font-weight: 400;
+}
+.default-modal-footer-buttons:nth-child(1){
+    background-color: gray;
+    color: white;
+}
+.default-modal-footer-buttons:nth-child(2){
+    background-color: rgb(53, 53, 215);
+    color: white;
+}
+  /* The Close Button */
+.default-modal-close {
+    color: #aaa;
+}
+.default-modal-close:nth-child(2){
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+.default-modal-close:hover,
+.default-modal-close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.warning{
+    color: red;
+    font-size: small;
+}
+
+
+.default-modal-content{
+    padding: 1rem;
+    border: 0;
+}
+.modal-icon-header{
+    display: flex;
+}
+
+.modal-icon-header>svg{
+    color: blue;
+}
+.modal-icon-header>h1{
+    padding-left: 0.5rem;
+    margin: 0;
+    font-size: large;
+}
+.modal-rows{
+    display: flex;
+    justify-content: space-between;
+}
+.form-control{
+    width: 10rem;
+    padding: 0.5rem;
+}
+
+
