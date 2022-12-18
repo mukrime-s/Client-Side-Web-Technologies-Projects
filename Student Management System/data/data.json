@@ -1,15 +1,6 @@
 {
   "students": [
     {
-      "id": 1,
-      "fname": "Isim1",
-      "lname": "Soyisim1",
-      "num": "152120171101",
-      "dept": "2",
-      "pob": "Eskişehir",
-      "dob": "1999-03-23"
-    },
-    {
       "id": 2,
       "fname": "Isim2",
       "lname": "Soyisim2",
@@ -217,13 +208,31 @@
       "dob": "2001-09-11"
     },
     {
-      "id": 25,
-      "fname": "Isim25",
-      "lname": "Soyisim25",
-      "num": "152120171125",
-      "dept": 3,
-      "pob": "Mersin",
-      "dob": "2000-07-17"
+      "id": 26,
+      "fname": "Aras",
+      "lname": "Karanlık",
+      "num": "152120102021",
+      "dept": "4",
+      "pob": "İzmir",
+      "dob": "2022-12-09"
+    },
+    {
+      "id": 28,
+      "fname": "Umut",
+      "lname": "Deniz",
+      "num": "151220192021",
+      "dept": "2",
+      "pob": "Kayseri",
+      "dob": "2001-10-03"
+    },
+    {
+      "id": 29,
+      "fname": "Cem",
+      "lname": "Kurt",
+      "num": "123123123123",
+      "dept": "2",
+      "pob": "Eskişehir",
+      "dob": "2022-12-22"
     }
   ]
 }
