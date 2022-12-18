@@ -1,5 +1,5 @@
 
-let link='http://localhost:3000/students'//'http://umutdeniz.html-5.me/data/data.json'
+let link='http://localhost:3000/students'
 
 //default parameters
 var listlimit=5;
@@ -16,14 +16,6 @@ const depts = {
     "3": "Endüstri Müh.",
     "4": "İnşaat Müh."
 };
-/*  
-const depts = {
-    "1": "Bilgisayar Müh.",
-    "2": "Elektrik-Elektronik Müh.",
-    "3": "Endüstri Müh.",
-    "4": "İnşaat Müh."
-    };
-*/
 
 axios.get(`${link}`)
     .then(response => {
@@ -172,13 +164,8 @@ axios.get(`${link}`)
                 modal.style.display = "none";
             }
             
-            window.onclick = (event) => {
-                if (event.target == modal) {
-                    modal.style.display = "none";   
-                }
-            }
             document.addEventListener('keydown', function(event) {
-                if (event.keyCode === 27) {
+                if (event.keyCode === 27) {//esc 
                     modal.style.display='none'
                 }
               })
