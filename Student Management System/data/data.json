@@ -37,15 +37,6 @@
       "dob": "2001-08-18"
     },
     {
-      "id": 6,
-      "fname": "Isim6",
-      "lname": "Soyisim6",
-      "num": "152120171106",
-      "dept": 2,
-      "pob": "Kars",
-      "dob": "1999-09-19"
-    },
-    {
       "id": 7,
       "fname": "Isim7",
       "lname": "Soyisim7",
@@ -233,6 +224,15 @@
       "dept": "2",
       "pob": "Eskişehir",
       "dob": "2022-12-22"
+    },
+    {
+      "id": 30,
+      "fname": "sadsa",
+      "lname": "dsfd",
+      "num": "152120191034",
+      "dept": "1",
+      "pob": "sadsa",
+      "dob": "2222-01-01"
     }
   ]
 }

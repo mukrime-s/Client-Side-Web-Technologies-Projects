@@ -310,7 +310,7 @@ axios.get(`${link}`)
             `
         };
 
-        function callOnclick(){
+        function callOnclick(){//arranged by page numbers.
 
             display(listlimit,((currentPage-1)*listlimit)+1,(((currentPage-1)*listlimit)+listlimit));
             document.querySelector('.footer-title').innerHTML=`<strong>${data.length}</strong> öğrenciden <strong>${
@@ -357,6 +357,31 @@ axios.get(`${link}`)
                 addFunction();
             }
         };
+        for(let i=1;i<=3;i++){
+            document.querySelector(`.limiter-buttons > button:nth-child(${i})`).onclick = () => {
+              listlimit=parseInt(document.querySelector(`.limiter-buttons > button:nth-child(${i})`).innerHTML);
+              if(currentPage>data.length/listlimit){
+                currentPage=Math.round(data.length/listlimit);
+              }
+              callOnclick();
+            }
+        }
+          
+        document.getElementById('btnadd').addEventListener('click', function() {//"was-validated" feature is added if there is a missing or incorrect status in the form when the person is added.
+            var form = document.getElementById('formId');
+            form.classList.add('was-validated');
+        }, false);
+
+        var studentNumberInput = document.getElementById('validationStudentNumber'); //Created to display a warning message if the school number is not entered as 12 digits.
+        studentNumberInput.addEventListener('input', function() {
+            var studentNumberLength = studentNumberInput.value.length;
+
+            if (studentNumberLength !== 12) {
+                studentNumberInput.classList.add('is-invalid');
+            } else {
+                studentNumberInput.classList.remove('is-invalid');
+            }
+        });
     }
 )
     .catch(error => console.log(error));
