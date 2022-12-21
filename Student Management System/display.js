@@ -1,7 +1,8 @@
 
 let link='http://localhost:3000/students'
-
-//default parameters
+/** 
+* @brief  Default parameters
+*/
 var listlimit=5;
 var currentPage=1;
 var missedDataCounter=0;
@@ -23,15 +24,20 @@ axios.get(`${link}`)
 
         data.forEach((element,index) => {
             try{
-                //Data Defination
+                /** 
+                * @brief  Data Defination added
+                */
                 defineTableElement(element.fname,element.lname,element.num,element.dept,element.id);
-                
-                //Page Button Defination
+                /** 
+                * @brief  Page Button Defination
+                */
                 document.querySelector('.page-buttons').innerHTML += `<button class="pageBtn${index}">${index+1}</button>` 
             }
             catch {console.log('There are undisplayable elements!');}    
         });
-        //default
+        /** 
+        * @brief  Default settings
+        */
         defineFunctions();
         callOnclick();
         display(5,1,5);
@@ -51,8 +57,9 @@ axios.get(`${link}`)
             }
             else{document.querySelector(".default-modal-footer-default-button").style.display='none'}
             
-
-            // When the user clicks on <span> (x) || Close || somewhere other than the modal
+            /** 
+            * @brief When the user clicks on <span> (x) || Close || somewhere other than the modal
+            */
             for(let i=0;i<2;i++){   
                 document.querySelectorAll(`.default-modal-close`)[i].onclick = () => {
                     modalObject.style.display = "none";
@@ -81,6 +88,9 @@ axios.get(`${link}`)
             let total=charCnt+intCnt;
             return {charCnt,intCnt,total};
         }
+        /** 
+        * @brief Created function input validator.
+        */
         function inputsValidator(input){
 
             let validPoint=0;
@@ -110,7 +120,9 @@ axios.get(`${link}`)
             }
             return false;
         }
-
+        /** 
+        * @brief Created function read data from modal
+        */
         function readDataFromModal(dataToRead){
             let temp;
                 for(let i=0; i<rowNumber*columnNumber; i++){
@@ -121,7 +133,9 @@ axios.get(`${link}`)
                 }
             return dataToRead;
         };
-
+        /** 
+        * @brief Created function write data from modal
+        */
         function writeDataToModal(indexOfDataToWrite,readOnlyFlag,resetflag){
             let temp;
             let row;
@@ -144,6 +158,9 @@ axios.get(`${link}`)
             }
         }
 
+        /** 
+        * @brief Created delete function.
+        */
         function deleteFunction(index){
 
             // Get the modal
@@ -179,7 +196,9 @@ axios.get(`${link}`)
                 };
             };
         };
-
+        /** 
+        * @brief Created detail function.
+        */
         function infoFunction(index){
 
             var defaultModal = document.querySelector(".default-modal");
@@ -188,7 +207,9 @@ axios.get(`${link}`)
             writeDataToModal(index,true,false);
 
         };
-        
+        /** 
+        * @brief Created edit function.
+        */
         function editFunction(index){
             
             //define Modal buttons
@@ -200,15 +221,18 @@ axios.get(`${link}`)
                 var forms=document.querySelectorAll(".needs-validation");
                 console.log(Array.prototype.slice.call(forms)[0][0].checkValidity())
                 console.log(forms)
-                
-                //Read inputs as a dict
+                /** 
+                * @brief this part for inputs as a dict
+                */
                 let updateData={firstName: null, lastName: null, studentNum: null, department: null, pob: null, dob: null}
                 updateData=readDataFromModal(updateData);
                 if(inputsValidator(updateData)==false){
                     return
                 }
 
-                //execute edit operation
+                /** 
+                * @brief this part for execute edit operation
+                */
                 axios.patch(`${link}/${index}`, {  
                     fname: updateData.firstName,
                     lname: updateData.lastName,
@@ -222,7 +246,9 @@ axios.get(`${link}`)
                 });
             };
         };
-
+        /** 
+        * @brief Created add function.
+        */
         function addFunction() {
             
             //define Modal buttons
@@ -231,17 +257,21 @@ axios.get(`${link}`)
             
             writeDataToModal(null,false,true);
 
-            //add operation
+            /** 
+            * @brief This part for add operation.
+            */
             document.querySelector('.default-modal-footer-default-button').onclick = () =>{
-                
-                //Read inputs as a dict
+                /** 
+                * @brief This part for read inputs as a dict.
+                */
                 let insertData={firstName: null, lastName: null, studentNum: null, department: null, pob: null, dob: null}
                 insertData=readDataFromModal(insertData);
                 if(inputsValidator(insertData)==false){
                     return
                 }
-    
-                //execute default operation
+                /** 
+                * @brief This part for execute default operation.
+                */
                 axios.post(`${link}`, {  
                     id: data[`${data.length-1}`].id+1,
                     fname: insertData.firstName,
@@ -256,7 +286,9 @@ axios.get(`${link}`)
                 });
             };
         }
-
+        /** 
+        * @brief Created none display function.
+        */
         function noneDisplay(){
             data.forEach((element,index) => {
                 let btn= document.querySelector(`.pageBtn${index}`);
@@ -266,7 +298,9 @@ axios.get(`${link}`)
             });
 
         };
-
+        /** 
+        * @brief Created display function.
+        */
         function display(listlimit,initialPoint,finalPoint){
             noneDisplay();
             
@@ -286,6 +320,9 @@ axios.get(`${link}`)
             });
             missedDataCounter=listlimit-missedDataCounter;
         };
+        /** 
+        * @brief Created define table element function.
+        */
 
         function defineTableElement(firstName,lastName,studentNum,department,elementId){
             let tablelist=document.querySelector('.student-list');
@@ -303,8 +340,10 @@ axios.get(`${link}`)
                 </tr>
             `
         };
-
-        function callOnclick(){//arranged by page numbers.
+        /** 
+        * @brief Created callOnclick function,arranged by page numbers.
+        */
+        function callOnclick(){
 
             display(listlimit,((currentPage-1)*listlimit)+1,(((currentPage-1)*listlimit)+listlimit));
             document.querySelector('.footer-title').innerHTML=`<strong>${data.length}</strong> öğrenciden <strong>${
@@ -313,7 +352,9 @@ axios.get(`${link}`)
                 missedDataCounter=0;
             }
         }
-
+        /** 
+        * @brief Created define function.
+        */
         function defineFunctions(){
             
             let operations=["delete","info","edit"];
@@ -335,8 +376,9 @@ axios.get(`${link}`)
                     });
                     callOnclick();
                 }
-
-                //define operation button functions 
+                /** 
+                * @brief This part for define operation button functions
+                */
                 for(let j=0; j < operations.length; j++){
                     document.querySelector(`#${operations[j]}${(element.id)}`).onclick = () => {
                         operationFunctions[j](element.id);
@@ -344,8 +386,9 @@ axios.get(`${link}`)
                     }
                 }
             });
-
-            //define limiter button functions
+            /** 
+            * @brief Created define define limiter button functions.
+            */
             for(let i=1;i<=3;i++){
                 document.querySelector(`.limiter-buttons > button:nth-child(${i})`).onclick = () => {
                     
@@ -368,13 +411,16 @@ axios.get(`${link}`)
                     callOnclick();
                 }
             }
-
-            //Define add button
+            /** 
+            * @brief This part for define add button.
+            */
             document.querySelector("#add-button").onclick = () => {
                 addFunction();
             }
         };
-
+        /** 
+        * @brief This part for modal elements edited according to requirements.
+        */
         for (let index = 0; index < 5; index++) {
             let temp=document.querySelectorAll('.modal-elements')[index].querySelector(':nth-child(2)');
             
@@ -429,11 +475,13 @@ axios.get(`${link}`)
             }
         )
     }
-        
-        document.getElementById('btnadd').addEventListener('click', function() {//"was-validated" feature is added if there is a missing or incorrect status in the form when the person is added.
-            var form = document.getElementById('formId');
-            form.classList.add('was-validated');
-        }, false);
+    /** 
+    * @brief This fuction is,"was-validated" feature is added if there is a missing or incorrect status in the form when the person is added.
+    */    
+    document.getElementById('btnadd').addEventListener('click', function() {
+        var form = document.getElementById('formId');
+        form.classList.add('was-validated');
+    }, false);    
 
     }
 )

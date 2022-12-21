@@ -1,11 +1,20 @@
 {
   "students": [
     {
+      "id": 1,
+      "fname": "Isim1",
+      "lname": "Soyisim1",
+      "num": "152120171101",
+      "dept": "2",
+      "pob": "Eskişehir",
+      "dob": "1999-03-23"
+    },
+    {
       "id": 2,
       "fname": "Isim2",
       "lname": "Soyisim2",
-      "num": "152120171101",
-      "dept": "1",
+      "num": "152120171102",
+      "dept": 1,
       "pob": "Ankara",
       "dob": "2000-04-30"
     },
@@ -37,6 +46,15 @@
       "dob": "2001-08-18"
     },
     {
+      "id": 6,
+      "fname": "Isim6",
+      "lname": "Soyisim6",
+      "num": "152120171106",
+      "dept": 2,
+      "pob": "Kars",
+      "dob": "1999-09-19"
+    },
+    {
       "id": 7,
       "fname": "Isim7",
       "lname": "Soyisim7",
@@ -47,10 +65,10 @@
     },
     {
       "id": 8,
-      "fname": "Isim",
-      "lname": "Soyisim",
+      "fname": "Isim8",
+      "lname": "Soyisim8",
       "num": "152120171108",
-      "dept": "4",
+      "dept": 4,
       "pob": "Antalya",
       "dob": "1995-12-25"
     },
@@ -199,76 +217,13 @@
       "dob": "2001-09-11"
     },
     {
-      "id": 26,
-      "fname": "Aras",
-      "lname": "Karanlık",
-      "num": "152120102021",
-      "dept": "4",
-      "pob": "İzmir",
-      "dob": "2022-12-09"
-    },
-    {
-      "id": 28,
-      "fname": "Umut",
-      "lname": "Deniz",
-      "num": "151220192021",
-      "dept": "2",
-      "pob": "Kayseri",
-      "dob": "2001-10-03"
-    },
-    {
-      "id": 29,
-      "fname": "Cem",
-      "lname": "Kurt",
-      "num": "123123123123",
-      "dept": "2",
-      "pob": "Eskişehir",
-      "dob": "2022-12-22"
-    },
-    {
-      "id": 30,
-      "fname": "Çipilay",
-      "lname": "Neşetay",
-      "num": "151210192032",
-      "dept": "2",
-      "pob": "İzmir",
-      "dob": "2001-09-14"
-    },
-    {
-      "id": 31,
-      "fname": "asa",
-      "lname": "das",
-      "num": "112233112233",
-      "dept": "2",
-      "pob": "kırkalbimiiiii",
-      "dob": "2022-12-14"
-    },
-    {
-      "id": 32,
-      "fname": "AlSevgilim",
-      "lname": "KIR",
-      "num": "313131313131",
-      "dept": "1",
-      "pob": "KALBİMİİİİİİİ",
-      "dob": "2022-12-07"
-    },
-    {
-      "id": 33,
-      "fname": "Abdurrahman",
-      "lname": "Yağız SARIKAVAK",
-      "num": "313131313131",
-      "dept": "2",
-      "pob": "BURSA",
-      "dob": "2022-12-07"
-    },
-    {
-      "id": 34,
-      "fname": "sle",
-      "lname": "tmm",
-      "num": "313131313131",
-      "dept": "3",
-      "pob": "kırkalbimiiiii",
-      "dob": "2022-12-14"
+      "id": 25,
+      "fname": "Isim25",
+      "lname": "Soyisim25",
+      "num": "152120171125",
+      "dept": 3,
+      "pob": "Mersin",
+      "dob": "2000-07-17"
     }
   ]
 }
