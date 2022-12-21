@@ -15,7 +15,7 @@ const depts = {
     "2": "Elektrik-Elektronik Müh.",
     "3": "Endüstri Müh.",
     "4": "İnşaat Müh."
-};
+};  
 
 axios.get(`${link}`)
     .then(response => {
@@ -35,6 +35,10 @@ axios.get(`${link}`)
         defineFunctions();
         callOnclick();
         display(5,1,5);
+        document.querySelector(`.limiter-buttons>button:nth-child(1)`).style.backgroundColor='blue';
+        document.querySelector(`.limiter-buttons>button:nth-child(1)`).style.color='white';
+        document.querySelector(`.page-buttons>button:nth-child(1)`).style.backgroundColor='blue'
+        document.querySelector(`.page-buttons>button:nth-child(1)`).style.color='white'
         
         function defaultModalOperations(modalObject,button,h1text){
             modalObject.style.display = 'block';
@@ -52,12 +56,8 @@ axios.get(`${link}`)
             for(let i=0;i<2;i++){   
                 document.querySelectorAll(`.default-modal-close`)[i].onclick = () => {
                     modalObject.style.display = "none";
+                    document.getElementById('formId').classList.remove('was-validated');
                 }
-            }
-            window.onclick = (event) => {
-                if (event.target == modalObject) {
-                    modalObject.style.display = "none";
-                    }
             }
             document.addEventListener('keydown', function(event) {
                 if (event.keyCode === 27) {
@@ -78,39 +78,33 @@ axios.get(`${link}`)
                     intCnt++;
                 }
             }
-            return {charCnt,intCnt};
+            let total=charCnt+intCnt;
+            return {charCnt,intCnt,total};
         }
-
         function inputsValidator(input){
 
             let validPoint=0;
-            if (searchString(input.firstName).charCnt>=3 ) {
+            if (searchString(input.firstName).charCnt>=3 && searchString(input.firstName).intCnt==0) {
                 validPoint+=1;
-
             }
         
-            if (searchString(input.lastName).charCnt>=3 ) {
+            if (searchString(input.lastName).charCnt>=3 && searchString(input.lastName).intCnt==0) {
                 validPoint+=1;
-
             }
             
             if (searchString(input.studentNum).intCnt==12 && searchString(input.studentNum).charCnt==0) {
                 validPoint+=1;
-                
             }
             
             if (searchString(input.department).intCnt==1) {
                 validPoint+=1;
-                
             }
+
             if (searchString(input.pob).charCnt>=3 && searchString(input.pob).intCnt==0) {
                 validPoint+=1;
-
             }
 
             console.log(validPoint)
-            
-            
             if (validPoint==5) {
                 return true;
             }
@@ -199,12 +193,12 @@ axios.get(`${link}`)
             
             //define Modal buttons
             var defaultModal = document.querySelector(".default-modal");
-            defaultModalOperations(defaultModal,'Edit','Düzenlenecek Öğrenci Bilgileri');
+            defaultModalOperations(defaultModal,'Düzenle','Düzenlenecek Öğrenci Bilgileri');
             
             writeDataToModal(index,false,false);
             document.querySelector(".default-modal-footer-default-button").onclick = () =>{
                 var forms=document.querySelectorAll(".needs-validation");
-                console.log(Array.prototype.slice.call(forms)[0][0].checkValidty())
+                console.log(Array.prototype.slice.call(forms)[0][0].checkValidity())
                 console.log(forms)
                 
                 //Read inputs as a dict
@@ -233,7 +227,7 @@ axios.get(`${link}`)
             
             //define Modal buttons
             var defaultModal = document.querySelector(".default-modal");
-            defaultModalOperations(defaultModal,'Add','Eklenecek Öğrenci Bilgileri');
+            defaultModalOperations(defaultModal,'Ekle','Eklenecek Öğrenci Bilgileri');
             
             writeDataToModal(null,false,true);
 
@@ -329,6 +323,16 @@ axios.get(`${link}`)
                 //define page button functions
                 document.querySelector(`.pageBtn${index}`).onclick = () => {
                     currentPage=parseInt(document.querySelector(`.pageBtn${index}`).innerHTML);
+                    data.forEach((item,cnt) => {
+                        if (index==cnt) {
+                            document.querySelector(`.page-buttons>button:nth-child(${cnt+1})`).style.backgroundColor='blue'
+                            document.querySelector(`.page-buttons>button:nth-child(${cnt+1})`).style.color='white'
+                        }
+                        else{
+                            document.querySelector(`.page-buttons>button:nth-child(${cnt+1})`).style.backgroundColor='white'
+                            document.querySelector(`.page-buttons>button:nth-child(${cnt+1})`).style.color='black'
+                        } 
+                    });
                     callOnclick();
                 }
 
@@ -344,6 +348,19 @@ axios.get(`${link}`)
             //define limiter button functions
             for(let i=1;i<=3;i++){
                 document.querySelector(`.limiter-buttons > button:nth-child(${i})`).onclick = () => {
+                    
+                    for(let j=1;j<=3;j++){
+                        if (i==j) {
+                            document.querySelector(`.limiter-buttons>button:nth-child(${j})`).style.backgroundColor='blue';
+                            document.querySelector(`.limiter-buttons>button:nth-child(${j})`).style.color='white';
+                            
+                        }
+                        else{
+                            document.querySelector(`.limiter-buttons>button:nth-child(${j})`).style.backgroundColor='white';
+                            document.querySelector(`.limiter-buttons>button:nth-child(${j})`).style.color='blue';
+                        }
+                    }
+                    
                     listlimit=parseInt(document.querySelector(`.limiter-buttons > button:nth-child(${i})`).innerHTML);
                     if(currentPage>data.length/listlimit){
                         currentPage=Math.round(data.length/listlimit);
@@ -357,31 +374,67 @@ axios.get(`${link}`)
                 addFunction();
             }
         };
-        for(let i=1;i<=3;i++){
-            document.querySelector(`.limiter-buttons > button:nth-child(${i})`).onclick = () => {
-              listlimit=parseInt(document.querySelector(`.limiter-buttons > button:nth-child(${i})`).innerHTML);
-              if(currentPage>data.length/listlimit){
-                currentPage=Math.round(data.length/listlimit);
-              }
-              callOnclick();
+
+        for (let index = 0; index < 5; index++) {
+            let temp=document.querySelectorAll('.modal-elements')[index].querySelector(':nth-child(2)');
+            
+            temp.addEventListener('input', function() {
+                
+                switch (index) {
+                    case 2:
+                        if (searchString(temp.value).charCnt!=0) {
+                            document.querySelectorAll('.modal-elements')[index].querySelector(':nth-child(4)').innerHTML="Harf giremezsiniz"
+                        } 
+                        else{                                
+                            document.querySelectorAll('.modal-elements')[index].querySelector(':nth-child(4)').innerHTML="Okul numarası 12 rakam içermelidir."
+                        }
+                        if(searchString(temp.value).total!=12 || searchString(temp.value).charCnt!=0){
+                            temp.classList.add('is-invalid');
+                            temp.classList.remove('is-valid');
+                        }
+                        else{
+                            temp.classList.remove('is-invalid');
+                            temp.classList.add('is-valid');
+                        }
+                        break;
+                    case 3:
+                        if (searchString(temp.value).total==1) {
+                            temp.classList.remove('is-invalid');
+                            temp.classList.add('is-valid');
+                        }
+                        else{
+                            temp.classList.add('is-invalid');
+                            temp.classList.remove('is-valid');
+                        }
+                        break;
+                    default:
+                        if (searchString(temp.value).intCnt!=0 || searchString(temp.value).charCnt < 3){
+                            if (searchString(temp.value).intCnt!=0) {
+                                document.querySelectorAll('.modal-elements')[index].querySelector(':nth-child(4)').innerHTML="Sayi giremezsiniz"
+                            } 
+                            else{                                
+                                let text=['İsim','Soyad']
+                                document.querySelectorAll('.modal-elements')[index].querySelector(':nth-child(4)').innerHTML=`${
+                                    text[index%2]} en az 3 harf içermelidir.`
+                            }
+                            temp.classList.add('is-invalid');
+                            temp.classList.remove('is-valid');
+                        }
+                        else{
+                            temp.classList.remove('is-invalid');
+                            temp.classList.add('is-valid');
+                        }
+                        break;
+                }
             }
-        }
-          
+        )
+    }
+        
         document.getElementById('btnadd').addEventListener('click', function() {//"was-validated" feature is added if there is a missing or incorrect status in the form when the person is added.
             var form = document.getElementById('formId');
             form.classList.add('was-validated');
         }, false);
 
-        var studentNumberInput = document.getElementById('validationStudentNumber'); //Created to display a warning message if the school number is not entered as 12 digits.
-        studentNumberInput.addEventListener('input', function() {
-            var studentNumberLength = studentNumberInput.value.length;
-
-            if (studentNumberLength !== 12) {
-                studentNumberInput.classList.add('is-invalid');
-            } else {
-                studentNumberInput.classList.remove('is-invalid');
-            }
-        });
     }
 )
-    .catch(error => console.log(error));
+.catch(error => console.log(error));

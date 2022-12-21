@@ -17,7 +17,7 @@
 
     <body>
 
-        <div class="default-modal">
+        <div class="default-modal" data-toggle="modal" role="dialog">
             <div class="default-modal-content"> 
                 <div class="default-modal-content-header modal-header">
                     <div class="modal-icon-header">
@@ -34,13 +34,15 @@
                         <div class="modal-rows">
                             <div class="modal-elements">
                                 <label for="validationCustom01" class="form-label">İsim</label>
-                                <input type="text" class="form-control" id="validationCustom01"required>
+                                <input type="text" class="form-control" id="validationCustom01"
+                                pattern="[a-zA-ZçÇğĞıİşŞöÖüÜ]{3,50}" required>
                                 <div class="valid-feedback"></div>
                                 <div class="invalid-feedback">İsim en az 3 harf içermelidir.</div>
                               </div>
                               <div class="modal-elements">
                                 <label for="validationCustom02" class="form-label">Soyisim</label>
-                                <input type="text" class="form-control" id="validationCustom02" required>
+                                <input type="text" class="form-control" id="validationCustom02"
+                                pattern="[a-zA-ZçÇğĞıİşŞöÖüÜ]{3,50}"  required>
                                 <div class="valid-feedback"></div>
                                 <div class="invalid-feedback">Soyad en az 3 harf içermelidir.</div>
                               </div>
@@ -48,7 +50,8 @@
                         <div class="modal-rows">
                             <div class="modal-elements">
                                 <label for="validationStudentNumber" class="form-label">Öğrenci Numarası</label>
-                                  <input type="text" class="form-control" id="validationStudentNumber" aria-describedby="inputGroupPrepend" required>
+                                  <input type="text" class="form-control" id="validationStudentNumber" aria-describedby="inputGroupPrepend"
+                                  pattern="[1234567890]{12}"  required>
                                   <div class="valid-feedback"></div>
                                   <div class="invalid-feedback">Okul numarası 12 rakam içermelidir.</div>
                               </div>
@@ -68,7 +71,8 @@
                         <div class="modal-rows">
                             <div class="modal-elements">
                                 <label for="validationCustom04" class="form-label">Doğum yeri</label>
-                                  <input type="text" class="form-control" id="validationCustom04" required>
+                                  <input type="text" class="form-control" id="validationCustom04"
+                                  pattern="[a-zA-ZçÇğĞıİşŞöÖüÜ]{3,50}"   required>
                                   <div class="valid-feedback"></div>
                                   <div class="invalid-feedback">Doğum yeri en az 3 harften oluşmalıdır.</div>
                             </div>
@@ -84,8 +88,8 @@
 
                 <div class="default-modal-content-footer modal-footer m-0">
 
-                    <button class="default-modal-footer-close-button default-modal-footer-buttons default-modal-close">Close</button>
-                    <button class="default-modal-footer-default-button default-modal-footer-buttons" type="submit" id="btnadd">Add</button>
+                    <button class="default-modal-footer-close-button default-modal-footer-buttons default-modal-close">Vazgeç</button>
+                    <button class="default-modal-footer-default-button default-modal-footer-buttons" type="submit" id="btnadd">Ekle</button>
 
                 </div>
             </div>
